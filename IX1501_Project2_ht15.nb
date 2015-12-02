@@ -1,0 +1,3569 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    124631,       3560]
+NotebookOptionsPosition[     63024,       2361]
+NotebookOutlinePosition[    115008,       3288]
+CellTagsIndexPosition[    114965,       3285]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ StyleBox["II",
+  FontFamily->"Times New Roman"],
+ ". Normal Distribution"
+}], "Title"],
+
+Cell["\<\
+KTH/ICT:IX1501 - Statistics
+G\[ODoubleDot]ran Andersson, goeran@kth.se
+ver. 151127\
+\>", "Text",
+ CellMargins->{{27, 10}, {0, 0}},
+ FontFamily->"Times New Roman",
+ FontSize->10],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ". Implementation and Assessment"
+}], "Section"],
+
+Cell["\<\
+The course includes two-three project tasks on a total of 4 hp. Data shall be \
+recorded in writing and orally. They will be given a summary grade in scale \
+A-F. The assessment includes how many project tasks which have been resolved, \
+the quality and the implementation of the written and oral presentation. The \
+first two tasks rating E. If you've been approved at the scheduled \
+examination of these, you can at the end of the course, choose to account for \
+a third project task for a higher grade. In general, excellent performance \
+increases the grade one step.\
+\>", "Text"],
+
+Cell[TextData[{
+ "In this project task you will work in a group of two and solve a \
+mathematical task, write a report (Swedish or English) in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ", write an opposition report (one page) on another goups report and prepare \
+a short oral presentation on your solution to the task (Swedish or English)."
+}], "Text"],
+
+Cell["\<\
+Carefully read the following information so that you know which rules apply \
+and what is expected of you.\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ " Report"
+}], "Subsection"],
+
+Cell["The report should be written in Mathematica and contain", "Text"],
+
+Cell[CellGroupData[{
+
+Cell["title and authors of the report", "Item"],
+
+Cell["email@kth.se", "Item"],
+
+Cell["a summary containing the results of resolved parts", "Item"],
+
+Cell["separate sections for each part containing e.g.", "Item"],
+
+Cell[CellGroupData[{
+
+Cell["mathematical formulas and equations", "Subitem"],
+
+Cell["a brief discussion ", "Subitem"],
+
+Cell["explanatory diagrams", "Subitem"],
+
+Cell["your conclusions.", "Subitem"]
+}, Open  ]],
+
+Cell["\<\
+separate code section (do not mix code and text with conclusions and results)\
+\>", "Item"]
+}, Open  ]],
+
+Cell["\<\
+The report will normally be uploaded one-two days prior to the examination \
+(see 1.5 below).\
+\>", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["1.2 Opposition Report", "Subsection"],
+
+Cell["The opposition report (one page) shall contain", "Text"],
+
+Cell[CellGroupData[{
+
+Cell["title and author of the report that the opposition concerns", "Item"],
+
+Cell["\<\
+name of author and email@kth.se to the authors of the opposition report\
+\>", "Item"],
+
+Cell["positive comments", "Item"],
+
+Cell["negative comments", "Item"],
+
+Cell["improvement suggestions", "Item"]
+}, Open  ]],
+
+Cell["\<\
+The opposition report will normally be uploaded before examination (see 1.5 \
+below).\
+\>", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ " Oral Presentation"
+}], "Subsection"],
+
+Cell[TextData[{
+ "You should prepare an oral presentation of your solution to the task. The \
+presentation will be carried out with your own laptop and ",
+ StyleBox["should not take more than five minutes",
+  FontSlant->"Italic"],
+ ", effective time. A computer projector will be available at the \
+presentation. Please carefully consider your presentation, what is important, \
+in what order and how it will be illustrated. Practice the presentation in \
+advance and make sure to meet the time frame. One of you in the group (of \
+two) will be selected randomly for the oral presentation and the other part \
+will be selected for questioning."
+}], "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ " Rules"
+}], "Subsection"],
+
+Cell[TextData[{
+ "The task is considered ",
+ StyleBox["individually",
+  FontSlant->"Italic"],
+ " and ",
+ StyleBox["assumes that you have full knowledge of all the material you are \
+presenting",
+  FontSlant->"Italic"],
+ ". In order to be approved, then you have solved the task and be able to \
+explain the entire task and solution. "
+}], "Text"],
+
+Cell["\<\
+To account for the task that you do not have solved is considered cheating. \
+It is also cheating to copy the solution or part of a solution from another. \
+If two solutions are presented as (partially) copies they are rejected both. \
+\>", "Text"],
+
+Cell["\<\
+If the solution contains parts, e.g. background material, which you do not \
+have produced, you must clearly indicate this and indicate the source.\
+\>", "Text"],
+
+Cell["\<\
+Suspicion of cheating or misleading can be reported to the Disciplinary Board.\
+\>", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ " Examination"
+}], "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+The examination is carried out according to the booking in Daisy 2015-12-09.\
+\>", "Item"],
+
+Cell[TextData[{
+ "Please note that this project should be reported in ",
+ StyleBox["groups of two students",
+  FontWeight->"Bold"],
+ "."
+}], "Item"],
+
+Cell[TextData[{
+ "Application for examination time is done in Daisy, which opens \
+2015-12-04T08:00 and closes  2015-12-07T08:00. Booking is done in",
+ StyleBox[" groups of two students",
+  FontWeight->"Bold"],
+ ". If you do not have any project companion please advertise in KTH Social \
+under \[OpenCurlyDoubleQuote]Projektuppgifter\[CloseCurlyDoubleQuote]. You \
+may not register as a single without approval of Haris Celik (harisc@kth.se)."
+}], "Item"],
+
+Cell["\<\
+Please notice the closing time in Daisy so the opposition groups can be set \
+up properly.\
+\>", "Item"],
+
+Cell[TextData[{
+ "The report shall be uploaded in KTH Social, before 2015-12-07T15:00. \
+\[LineSeparator]",
+ StyleBox["Only one report per group",
+  FontWeight->"Bold"],
+ ". ",
+ StyleBox["Use the following file name syntax",
+  FontWeight->"Bold"],
+ "\[LineSeparator]",
+ StyleBox["Lastname1Firstname1_Lastname2Firstname2.nb", "Input"],
+ "\[LineSeparator]No \[ARing], \[ADoubleDot] or \[ODoubleDot] (remove ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox[" ", "\[SmallCircle]"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[" ", "\[DoubleDot]"], TraditionalForm]]],
+ ") and no accents or special characters.",
+ StyleBox[" Enter no other information in the file name",
+  FontWeight->"Bold"],
+ "."
+}], "Item"],
+
+Cell[TextData[{
+ "The opposition report shall be uploaded in KTH Social, before \
+2015-12-08T15:00. \[LineSeparator]",
+ StyleBox["Only one opposition report per group",
+  FontWeight->"Bold"],
+ ". Use the same filename syntax as above, but the filename shall contain the \
+",
+ StyleBox["names of the respondents",
+  FontWeight->"Bold"],
+ " (",
+ StyleBox["not",
+  FontWeight->"Bold"],
+ " your names). The name of the uploader will be known by the system. "
+}], "Item"],
+
+Cell["\<\
+A printed copy of the report must be submitted at examination. Don\
+\[CloseCurlyQuote]t print the code section.\
+\>", "Item"],
+
+Cell["\<\
+Notice that the report shall always be uploaded in time even if you cannot \
+attend at the oral presentation. In case of illness, etc., then the oral \
+presentation may be made during project 3. If you are unable to attend, you \
+must in advance inform the teacher (in writing).\
+\>", "Item"],
+
+Cell["\<\
+If you ignore the oral presentation or the uploading of the report without \
+contacting the teacher (in writing) you will have to wait for the next course \
+for a new project exam.\
+\>", "Item"]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ". Preparations"
+}], "Section"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ " Study"
+}], "Subsection"],
+
+Cell["\<\
+Read the following chapters in the course book (Blom). A \[FilledSmallCircle] \
+means read carefully and a \[EmptySmallCircle] means glance through.\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell["4.1-4, 4.5, 4.7", "SubitemParagraph",
+ CellDingbat->"\[EmptySmallCircle]"],
+
+Cell["5.1-3, 5.5", "SubitemParagraph",
+ CellDingbat->"\[FilledSmallCircle]"],
+
+Cell["5.6", "SubitemParagraph",
+ CellDingbat->"\[EmptySmallCircle]"],
+
+Cell["6.1-5, 6.7", "SubitemParagraph",
+ CellDingbat->"\[FilledSmallCircle]"],
+
+Cell["7.1-4", "SubitemParagraph",
+ CellDingbat->"\[FilledSmallCircle]"]
+}, Open  ]],
+
+Cell["\<\
+Hint: Also study the notebooks from the lectures. These contain Mathematica \
+code on how to handle rvs.\
+\>", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ " Convolution"
+}], "Subsection"],
+
+Cell[TextData[{
+ "In this project task we will focus on a ",
+ StyleBox["sum of independent stochastic variables",
+  FontWeight->"Bold"],
+ " (or random variables, rvs). In some cases, it is possible to determine the \
+correct probability distribution. In other cases you have to rely on \
+approximations."
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ ".",
+ 
+ CounterBox["Subsubsection"],
+ " Theory for Discrete RVS"
+}], "Subsubsection"],
+
+Cell[TextData[{
+ "The distribution of a sum of two independent discrete rvs ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicS]", "=", 
+    RowBox[{"\[GothicX]", "+", "\[GothicY]"}]}], TraditionalForm]]],
+ " can be determined by the following reasoning. If the sum ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicS]", "=", "s"}], TraditionalForm]]],
+ " and we have ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicX]", "=", "i"}], TraditionalForm]]],
+ " then ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicY]", "=", 
+    RowBox[{"s", "-", "i"}]}], TraditionalForm]]],
+ ". Since  ",
+ Cell[BoxData[
+  FormBox["\[GothicX]", TraditionalForm]]],
+ " and  ",
+ Cell[BoxData[
+  FormBox["\[GothicY]", TraditionalForm]]],
+ " are independent the probability is"
+}], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"P", "(", 
+    RowBox[{"\[GothicX]", "=", 
+     RowBox[{
+      RowBox[{"i", "\[And]", "\[GothicY]"}], "=", 
+      RowBox[{"s", "-", "i"}]}]}], ")"}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"P", "(", 
+      RowBox[{"\[GothicX]", "=", "i"}], ")"}], 
+     RowBox[{"P", "(", 
+      RowBox[{"\[GothicY]", "=", 
+       RowBox[{"s", "-", "i"}]}], ")"}]}], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["pf", "\[GothicX]"], "(", "i", ")"}], 
+     RowBox[{
+      SubscriptBox["pf", "\[GothicY]"], "(", 
+      RowBox[{"s", "-", "i"}], ")"}]}]}]}], 
+  TraditionalForm]], "DisplayFormula"],
+
+Cell[TextData[{
+ "If we add up all the possible values for ",
+ Cell[BoxData[
+  FormBox["i", TraditionalForm]]],
+ " we get the probability of that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicS]", "=", "s"}], TraditionalForm]]]
+}], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"P", "(", 
+    RowBox[{"\[GothicS]", "=", "s"}], ")"}], "=", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["pf", "\[GothicCapitalS]"], "(", "s", ")"}], "=", 
+    RowBox[{
+     RowBox[{
+      UnderscriptBox["\[Sum]", 
+       RowBox[{"\[ForAll]", "i"}]], 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["pf", "\[GothicX]"], "(", "i", ")"}], 
+       RowBox[{
+        SubscriptBox["pf", "\[GothicY]"], "(", 
+        RowBox[{"s", "-", "i"}], ")"}]}]}], "=", 
+     RowBox[{
+      UnderscriptBox["\[Sum]", 
+       RowBox[{"\[ForAll]", "i"}]], 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["pf", "\[GothicX]"], "(", 
+        RowBox[{"s", "-", "i"}], ")"}], 
+       RowBox[{
+        SubscriptBox["pf", "\[GothicY]"], "(", "i", ")"}]}]}]}]}]}], 
+  TraditionalForm]], "DisplayFormula"],
+
+Cell[TextData[{
+ "This sum is called the ",
+ StyleBox["convolution",
+  FontWeight->"Bold"],
+ ", often written with a star as an operator: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["pf", "\[GothicS]"], "(", "s", ")"}], "=", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["pf", "\[GothicX]"], "\[Star]", 
+       SubscriptBox["pf", "\[GothicY]"]}], ")"}], 
+     RowBox[{"(", "s", ")"}]}]}], TraditionalForm]]],
+ ". In order to retrieve all the values in the sum the index should cover (at \
+least) all values of the union of the sample spaces of ",
+ Cell[BoxData[
+  FormBox["\[GothicX]", TraditionalForm]]],
+ " and  ",
+ "\[GothicY]",
+ ", i.e. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"i", "\[Element]", 
+    RowBox[{"{", 
+     RowBox[{
+      SubscriptBox["\[CapitalOmega]", "\[GothicX]"], "\[Union]", 
+      SubscriptBox["\[CapitalOmega]", "\[GothicY]"]}], "}"}]}], 
+   TraditionalForm]]],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ "If we would like to continue with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicV]", "=", 
+    RowBox[{"\[GothicX]", "+", "\[GothicY]", "+", "\[GothicZ]"}]}], 
+   TraditionalForm]]],
+ "  we can consider ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicV]", "=", 
+    RowBox[{"\[GothicS]", "+", "\[GothicZ]"}]}], TraditionalForm]]],
+ " and use the convolution sum for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicS]", "+", "\[GothicZ]"}], TraditionalForm]]],
+ "."
+}], "Text",
+ CellDingbat->"\[Therefore]"],
+
+Cell[TextData[{
+ "Now, assume that all rvs ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[GothicX]", "i"], TraditionalForm]]],
+ " are ",
+ StyleBox["i",
+  FontWeight->"Bold"],
+ "ndependent ",
+ StyleBox["i",
+  FontWeight->"Bold"],
+ "dentical ",
+ StyleBox["d",
+  FontWeight->"Bold"],
+ "istributed (iid) and introduce a variable ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]]],
+ " for the number of rvs in the sum. We want to get the probability function "
+}], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["pf", "n"], "(", "s", ")"}], "=", 
+   RowBox[{"P", "(", 
+    RowBox[{
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "1"}], "n"], 
+      SubscriptBox["\[GothicX]", "i"]}], "=", "s"}], ")"}]}], 
+  TraditionalForm]], "DisplayFormula"],
+
+Cell["A convenient way here is to make a recursive definition:", "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["pf", "n"], "(", "s", ")"}], "=", 
+   RowBox[{
+    UnderscriptBox["\[Sum]", 
+     RowBox[{"\[ForAll]", "i"}]], 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["pf", "1"], "(", 
+      RowBox[{"s", "-", "i"}], ")"}], 
+     RowBox[{
+      SubscriptBox["pf", 
+       RowBox[{"n", "-", "1"}]], "(", "i", ")"}]}]}]}], 
+  TraditionalForm]], "DisplayFormula",
+ UnderscriptBoxOptions->{LimitsPositioning->False}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ ".",
+ 
+ CounterBox["Subsubsection"],
+ " Discrete Examples"
+}], "Subsubsection"],
+
+Cell[TextData[{
+ "The recurrence above can be programmed (see ",
+ ButtonBox["Functions That Remember Values They Have Found",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/FunctionsThatRememberValuesTheyHaveFound"],
+ "). However, in some cases you can use ",
+ Cell[BoxData[
+  ButtonBox["TransformedDistribution",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/TransformedDistribution"]]],
+ ", ",
+ Cell[BoxData[
+  ButtonBox["DiscreteConvolve",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/DiscreteConvolve"]]],
+ " or ",
+ Cell[BoxData[
+  ButtonBox["ListConvolve",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/ListConvolve"]]],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ "Notice that when you use discrete distributions in Mathematica the ",
+ Cell[BoxData[
+  ButtonBox["PDF",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/PDF"]]],
+ " actually means the probability function (pf). This means that ",
+ StyleBox["PDF[\[ScriptCapitalD],x]", "Output"],
+ " expresses a probability (not a probability density as in the continuous \
+case)."
+}], "Text",
+ CellDingbat->"\[FivePointedStar]"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{"x", "=", 
+     RowBox[{"a", "+", "1"}]}], "b"], 
+   RowBox[{"PDF", "[", 
+    RowBox[{"\[ScriptCapitalD]", ",", "x"}], "]"}]}], "\[Equal]", 
+  RowBox[{
+   RowBox[{"CDF", "[", 
+    RowBox[{"\[ScriptCapitalD]", ",", "b"}], "]"}], "-", 
+   RowBox[{"CDF", "[", 
+    RowBox[{"\[ScriptCapitalD]", ",", "a"}], "]"}]}], "\[Equal]", 
+  RowBox[{"Probability", "[", 
+   RowBox[{
+    RowBox[{"a", "<", "X", "\[LessEqual]", "b"}], ",", 
+    RowBox[{"X", "\[Distributed]", "\[ScriptCapitalD]"}]}], 
+   "]"}]}]], "Program"],
+
+Cell[TextData[{
+ "Notice also that in the discrete case the ",
+ Cell[BoxData[
+  FormBox[Cell["pf"], TraditionalForm]]],
+ " is a discrete function while the ",
+ Cell[BoxData[
+  FormBox["cdf", TraditionalForm]]],
+ " is a (piecewise) continuous function."
+}], "Text"],
+
+Cell["Example 1", "Text",
+ CellDingbat->"\[EmptyCircle]"],
+
+Cell[TextData[{
+ "Here's an example of the sum ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"S", "=", 
+    RowBox[{"X", "+", "Y"}]}], TraditionalForm]]],
+ " of two uniformly distributed discrete rvs."
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "\"\<`*\>\"", "]"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[ScriptCapitalX]", "=", 
+   RowBox[{"DiscreteUniformDistribution", "[", 
+    RowBox[{"{", 
+     RowBox[{"3", ",", "7"}], "}"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"\[ScriptCapitalY]", "=", 
+   RowBox[{"DiscreteUniformDistribution", "[", 
+    RowBox[{"{", 
+     RowBox[{"10", ",", "15"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"\[CapitalOmega]", "=", 
+  RowBox[{"Union", "[", 
+   RowBox[{
+    RowBox[{"Range", "[", 
+     RowBox[{"3", ",", "7"}], "]"}], ",", 
+    RowBox[{"Range", "[", 
+     RowBox[{"10", ",", "15"}], "]"}]}], "]"}]}]}], "Input"],
+
+Cell[TextData[{
+ "We can use ",
+ Cell[BoxData[
+  ButtonBox["TransformedDistribution",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/TransformedDistribution"]]],
+ " in order to compute the distribution of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"S", "=", 
+    RowBox[{"X", "+", "Y"}]}], TraditionalForm]]],
+ "."
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[ScriptCapitalS]", "=", 
+   RowBox[{"TransformedDistribution", "[", 
+    RowBox[{
+     RowBox[{"X", "+", "Y"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"X", "\[Distributed]", "\[ScriptCapitalX]"}], ",", 
+       RowBox[{"Y", "\[Distributed]", "\[ScriptCapitalY]"}]}], "}"}]}], 
+    "]"}]}], ";"}]], "Input"],
+
+Cell["The probability of getting the sum 15 is", "Text"],
+
+Cell[BoxData[
+ RowBox[{"PDF", "[", 
+  RowBox[{"\[ScriptCapitalS]", ",", "15"}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "We can also compute ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["pf", "X"], "\[Star]", 
+      SubscriptBox["pf", "Y"]}], ")"}], 
+    RowBox[{"(", "15", ")"}]}], TraditionalForm]]],
+ "."
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"PDF", "[", 
+     RowBox[{"\[ScriptCapitalX]", ",", " ", "i"}], "]"}], " ", 
+    RowBox[{"PDF", "[", 
+     RowBox[{"\[ScriptCapitalY]", ",", " ", 
+      RowBox[{"15", " ", "-", " ", "i"}]}], "]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", " ", "\[CapitalOmega]"}], "}"}]}], "]"}]], "Input"],
+
+Cell["Calculation by hand:", "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"P", "(", 
+    RowBox[{"S", "=", "15"}], ")"}], "=", 
+   RowBox[{
+    FractionBox[
+     SubscriptBox["n", "fav"], 
+     SubscriptBox["n", "tot"]], "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[LeftBracketingBar]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"3", ",", "12"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"4", ",", "11"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"5", ",", "10"}], "}"}]}], "}"}], "\[RightBracketingBar]"}], 
+      RowBox[{"5", "\[Times]", "6"}]], "=", 
+     RowBox[{
+      FractionBox["3", "30"], "=", 
+      FractionBox["1", "10"]}]}]}]}], TraditionalForm]], "DisplayFormula"],
+
+Cell[TextData[{
+ "Here a plot of the ",
+ Cell[BoxData[
+  FormBox["pf", TraditionalForm]]],
+ ":"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"DiscretePlot", "[", 
+  RowBox[{
+   RowBox[{"Evaluate", "[", 
+    RowBox[{"PDF", "[", 
+     RowBox[{"\[ScriptCapitalS]", ",", "s"}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"s", ",", "10", ",", "25"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"HoldForm", "[", "s", "]"}], ",", 
+      RowBox[{"HoldForm", "[", 
+       RowBox[{"pf", "[", "s", "]"}], "]"}]}], "}"}]}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "This plot is equivalent to the discrete plot of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["pf", "X"], "\[Star]", 
+      SubscriptBox["pf", "Y"]}], ")"}], 
+    RowBox[{"(", "s", ")"}]}], TraditionalForm]]],
+ ". Try to also to plot"
+}], "Text"],
+
+Cell["\<\
+Evaluate[
+DiscreteConvolve[PDF[\[ScriptCapitalX], k], PDF[\[ScriptCapitalY], k], k, s]
+]\
+\>", "Program"],
+
+Cell[TextData[{
+ "The probability that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"15", "\[LessEqual]", "S", "\[LessEqual]", "18"}], 
+   TraditionalForm]]],
+ " is"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"Probability", "[", 
+  RowBox[{
+   RowBox[{"15", "\[LessEqual]", "S", "\[LessEqual]", "18"}], ",", 
+   RowBox[{"S", "\[Distributed]", "\[ScriptCapitalS]"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "Here a plot of the ",
+ Cell[BoxData[
+  FormBox["cdf", TraditionalForm]]],
+ ":"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"DiscretePlot", "[", 
+  RowBox[{
+   RowBox[{"Evaluate", "[", 
+    RowBox[{"CDF", "[", 
+     RowBox[{"\[ScriptCapitalS]", ",", "s"}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"s", ",", "10", ",", "25"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"HoldForm", "[", "s", "]"}], ",", 
+      RowBox[{"HoldForm", "[", 
+       RowBox[{"cdf", "[", "s", "]"}], "]"}]}], "}"}]}], ",", 
+   RowBox[{"ExtentSize", "\[Rule]", "Right"}], ",", 
+   RowBox[{"ExtentMarkers", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Filled\>\"", ",", "\"\<Empty\>\""}], "}"}]}], ",", 
+   RowBox[{"Filling", "\[Rule]", "None"}]}], "]"}]], "Input"],
+
+Cell["Example 2", "Text",
+ CellDingbat->"\[EmptyCircle]"],
+
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "\"\<`*\>\"", "]"}]], "Input"],
+
+Cell["\<\
+In an amusement park there\[CloseCurlyQuote]s a stand where you can win a \
+giant teddy if you pay \[Euro]2 and play ten dice. Now, if the sum is 20 or \
+lower or 50 or larger the teddy is yours. What\[CloseCurlyQuote]s the \
+expected value you have to pay for the teddy?\
+\>", "Text"],
+
+Cell[TextData[{
+ "In this case ",
+ Cell[BoxData[
+  ButtonBox["TransformedDistribution",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/TransformedDistribution"]]],
+ " is not very efficient. Since the sample space is finite an efficient \
+method is ",
+ Cell[BoxData[
+  ButtonBox["ListConvolve",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/ListConvolve"]]],
+ " which computes the convolution sum very fast."
+}], "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"P", "[", "1", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     FractionBox["1", "6"], ",", 
+     FractionBox["1", "6"], ",", 
+     FractionBox["1", "6"], ",", 
+     FractionBox["1", "6"], ",", 
+     FractionBox["1", "6"], ",", 
+     FractionBox["1", "6"]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"P", "[", "n_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"P", "[", "n", "]"}], "=", 
+   RowBox[{"ListConvolve", "[", 
+    RowBox[{
+     RowBox[{"P", "[", 
+      RowBox[{"n", "-", "1"}], "]"}], ",", 
+     RowBox[{"P", "[", "1", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", 
+       RowBox[{"-", "1"}]}], "}"}], ",", "0"}], "]"}]}]}]}], "Input"],
+
+Cell[TextData[{
+ "We recognize the probabilities for getting sums ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"2", ",", "3", ",", "...", ",", "12"}], TraditionalForm]]],
+ " if we use two dice:"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"P", "[", "2", "]"}]], "Input"],
+
+Cell["\<\
+The probabilities occurs as positions in a list so we can easily make a \
+function of this:\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pf", "[", 
+   RowBox[{"n_", ",", "s_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"P", "[", "n", "]"}], "\[LeftDoubleBracket]", 
+   RowBox[{"s", "-", "n", "+", "1"}], "\[RightDoubleBracket]"}]}]], "Input"],
+
+Cell["The probability of getting the sum 50 in one game is then", "Text"],
+
+Cell[BoxData[
+ RowBox[{"pf", "[", 
+  RowBox[{"10", ",", "50"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"pf", "[", 
+   RowBox[{"10", ",", "50"}], "]"}], "]"}]], "Input"],
+
+Cell["The probability of winning the teddy is", "Text"],
+
+Cell[BoxData[
+ RowBox[{"Pwin", "=", 
+  RowBox[{
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"s", "=", "10"}], "20"], 
+    RowBox[{"pf", "[", 
+     RowBox[{"10", ",", "s"}], "]"}]}], "+", 
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"s", "=", "50"}], "60"], 
+    RowBox[{"pf", "[", 
+     RowBox[{"10", ",", "s"}], "]"}]}]}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"N", "[", "Pwin", "]"}]], "Input"],
+
+Cell["\<\
+The number of trials you loose before you win the teddy is geometric \
+distributed. So expected value of the number of games you have to play is\
+\>", "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[ScriptCapitalG]", "=", 
+   RowBox[{"GeometricDistribution", "[", "Pwin", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Egames", "=", 
+  RowBox[{
+   RowBox[{"Mean", "[", "\[ScriptCapitalG]", "]"}], "+", "1"}]}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"N", "[", "%", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  FractionBox["1", "Pwin"], "]"}]], "Input"],
+
+Cell[TextData[{
+ "Since you pay ",
+ Cell[BoxData[
+  FormBox["\[Euro]2", TraditionalForm]]],
+ " for each game the expected value you have to pay for the teddy is around ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Euro]2", "\[Times]", "173"}], "=", "\[Euro]346"}], 
+   TraditionalForm]]],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ "Now if the teddy costs ",
+ Cell[BoxData[
+  FormBox["\[Euro]100", TraditionalForm]]],
+ ", what is the probability that you pay less than this if you roll the dice? \
+Answering this question is equivalent to the problem of computing the \
+probability that the number of losses is less than ",
+ Cell[BoxData[
+  FormBox["49", TraditionalForm]]],
+ "."
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"CDF", "[", 
+   RowBox[{"\[ScriptCapitalG]", ",", "48"}], "]"}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "So that\[CloseCurlyQuote]s a fair chance. On the other hand, the \
+probability that you pay at least ",
+ Cell[BoxData[
+  FormBox["\[Euro]100", TraditionalForm]]],
+ " is around ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"75", "%"}], TraditionalForm]]],
+ " and the probability that you pay at least ",
+ Cell[BoxData[
+  FormBox["\[Euro]200", TraditionalForm]]],
+ " is "
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"1", "-", 
+   RowBox[{"CDF", "[", 
+    RowBox[{"\[ScriptCapitalG]", ",", "99"}], "]"}]}], "]"}]], "Input"],
+
+Cell["\<\
+We finish with a plot of the probability function of the sum of ten dice \
+(maybe you recognize the shape).\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{"data", "=", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"pf", "[", 
+      RowBox[{"10", ",", "s"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"s", ",", "10", ",", "60"}], "}"}]}], "]"}], "//", 
+   "N"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"data", ",", 
+   RowBox[{"DataRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"10", ",", "60"}], "}"}]}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"HoldForm", "[", "s", "]"}], ",", 
+      RowBox[{"HoldForm", "[", 
+       RowBox[{"pf", "[", "s", "]"}], "]"}]}], "}"}]}]}], "]"}]], "Input"],
+
+Cell["\<\
+Now, this looks similar to a continuous distribution I\[CloseCurlyQuote]ve \
+seen somewhere.\
+\>", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ ".",
+ 
+ CounterBox["Subsubsection"],
+ " Theory for Continuous RVS"
+}], "Subsubsection"],
+
+Cell[TextData[{
+ "The distribution of a sum of two independent continuous rvs ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicS]", "=", 
+    RowBox[{"\[GothicX]", "+", "\[GothicY]"}]}], TraditionalForm]]],
+ " can be determined by the following reasoning. If the sum ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicS]", "=", "s"}], TraditionalForm]]],
+ " and we have ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicX]", "=", "t"}], TraditionalForm]]],
+ " then ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicY]", "=", 
+    RowBox[{"s", "-", "t"}]}], TraditionalForm]]],
+ ". Since  ",
+ Cell[BoxData[
+  FormBox["\[GothicX]", TraditionalForm]]],
+ " and  ",
+ Cell[BoxData[
+  FormBox["\[GothicY]", TraditionalForm]]],
+ " are independent the pdf is"
+}], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["pdf", "\[GothicX]"], "(", "i", ")"}], 
+   RowBox[{
+    SubscriptBox["pdf", "\[GothicY]"], "(", 
+    RowBox[{"s", "-", "t"}], ")"}]}], TraditionalForm]], "DisplayFormula"],
+
+Cell[TextData[{
+ "If we integrate over all the possible values of ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]]],
+ ", where the product is nonzero, we get the probability density at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicS]", "=", "s"}], TraditionalForm]]]
+}], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["pdf", "\[GothicS]"], "(", "s", ")"}], "=", 
+   RowBox[{
+    RowBox[{
+     UnderscriptBox["\[Integral]", 
+      RowBox[{"\[ForAll]", "t"}]], 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["pdf", "\[GothicX]"], "(", "t", ")"}], 
+      RowBox[{
+       SubscriptBox["pdf", "\[GothicY]"], "(", 
+       RowBox[{"s", "-", "t"}], ")"}], "d", "\[InvisibleSpace]", "t"}]}], "=", 
+    RowBox[{
+     UnderscriptBox["\[Integral]", 
+      RowBox[{"\[ForAll]", "t"}]], 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["pdf", "\[GothicX]"], "(", 
+       RowBox[{"s", "-", "t"}], ")"}], 
+      RowBox[{
+       SubscriptBox["pdf", "\[GothicY]"], "(", "t", ")"}], "d", 
+      "\[InvisibleSpace]", "t"}]}]}]}], TraditionalForm]], "DisplayFormula"],
+
+Cell[TextData[{
+ "This integral is called ",
+ StyleBox["convolution",
+  FontWeight->"Bold"],
+ ", often written with a star ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["pdf", "\[GothicS]"], "(", "s", ")"}], "=", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["pdf", "\[GothicX]"], "\[Star]", 
+       SubscriptBox["pdf", "\[GothicY]"]}], ")"}], 
+     RowBox[{"(", "s", ")"}]}]}], TraditionalForm]]],
+ ". In order to retrieve all the values in the integral the variable ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]]],
+ " should cover (at least) all values of the union of the sample spaces of ",
+ Cell[BoxData[
+  FormBox["\[GothicX]", TraditionalForm]]],
+ " and  ",
+ "\[GothicY]",
+ ", i.e. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", "\[Element]", 
+    RowBox[{"{", 
+     RowBox[{
+      SubscriptBox["\[CapitalOmega]", "\[GothicX]"], "\[Union]", 
+      SubscriptBox["\[CapitalOmega]", "\[GothicY]"]}], "}"}]}], 
+   TraditionalForm]]],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ "If we would like to continue with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicV]", "=", 
+    RowBox[{"\[GothicX]", "+", "\[GothicY]", "+", "\[GothicZ]"}]}], 
+   TraditionalForm]]],
+ "  we can consider ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicV]", "=", 
+    RowBox[{"\[GothicS]", "+", "\[GothicZ]"}]}], TraditionalForm]]],
+ " and use the convolution sum for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[GothicS]", "+", "\[GothicZ]"}], TraditionalForm]]],
+ "."
+}], "Text",
+ CellDingbat->"\[Therefore]"],
+
+Cell[TextData[{
+ "Now, assume that all rvs ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[GothicX]", "i"], TraditionalForm]]],
+ " are iid and introduce a variable ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]]],
+ " for the number of rvs in the sum. A convenient way here is to make a \
+recursive definition:"
+}], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["pdf", "n"], "(", "s", ")"}], "=", 
+   RowBox[{
+    UnderscriptBox["\[Integral]", 
+     RowBox[{"\[ForAll]", "t"}]], 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["pdf", "1"], "(", 
+      RowBox[{"s", "-", "t"}], ")"}], 
+     RowBox[{
+      SubscriptBox["pdf", 
+       RowBox[{"n", "-", "1"}]], "(", "t", ")"}], "d", "\[InvisibleSpace]", 
+     "t"}]}]}], TraditionalForm]], "DisplayFormula",
+ UnderscriptBoxOptions->{LimitsPositioning->False}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ ".",
+ 
+ CounterBox["Subsubsection"],
+ " Continuous Examples"
+}], "Subsubsection"],
+
+Cell[TextData[{
+ "The recurrence above can be programmed (see ",
+ ButtonBox["Functions That Remember Values They Have Found",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/FunctionsThatRememberValuesTheyHaveFound"],
+ "). However, in some cases you can use ",
+ Cell[BoxData[
+  ButtonBox["TransformedDistribution",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/TransformedDistribution"]]],
+ " or ",
+ Cell[BoxData[
+  ButtonBox["Convolve",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Convolve"]]],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ "Notice that when you use continuous distributions in Mathematica the ",
+ Cell[BoxData[
+  ButtonBox["PDF",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/PDF"]]],
+ " means the ",
+ StyleBox["p",
+  FontWeight->"Bold"],
+ "robability ",
+ StyleBox["d",
+  FontWeight->"Bold"],
+ "ensity ",
+ StyleBox["f",
+  FontWeight->"Bold"],
+ "unction. This means that ",
+ StyleBox["PDF[\[ScriptCapitalD],x]", "Output"],
+ " has to be integrated over some interval in order to express a probability. \
+The ",
+ Cell[BoxData[
+  ButtonBox["CDF",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/CDF"]]],
+ " (",
+ StyleBox["c",
+  FontWeight->"Bold"],
+ "umulative ",
+ StyleBox["d",
+  FontWeight->"Bold"],
+ "istribution ",
+ StyleBox["f",
+  FontWeight->"Bold"],
+ "unction) however, expresses probability."
+}], "Text",
+ CellDingbat->"\[FivePointedStar]"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "a", "b"], 
+   RowBox[{
+    RowBox[{"PDF", "[", 
+     RowBox[{"\[ScriptCapitalD]", ",", "x"}], "]"}], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}], "\[Equal]", 
+  RowBox[{
+   RowBox[{"CDF", "[", 
+    RowBox[{"\[ScriptCapitalD]", ",", "b"}], "]"}], "-", 
+   RowBox[{"CDF", "[", 
+    RowBox[{"\[ScriptCapitalD]", ",", "a"}], "]"}]}], "\[Equal]", 
+  RowBox[{"Probability", "[", 
+   RowBox[{
+    RowBox[{"a", "<", "X", "\[LessEqual]", "b"}], ",", 
+    RowBox[{"X", "\[Distributed]", "\[ScriptCapitalD]"}]}], 
+   "]"}]}]], "Program"],
+
+Cell["Example 1", "Text",
+ CellDingbat->"\[EmptyCircle]"],
+
+Cell["\<\
+Here's an example of the sum of two uniformly distributed rvs.\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "\"\<`*\>\"", "]"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[ScriptCapitalX]", "=", 
+   RowBox[{"UniformDistribution", "[", 
+    RowBox[{"{", 
+     RowBox[{"3", ",", "7"}], "}"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"\[ScriptCapitalY]", "=", 
+   RowBox[{"UniformDistribution", "[", 
+    RowBox[{"{", 
+     RowBox[{"10", ",", "15"}], "}"}], "]"}]}], ";"}]}], "Input"],
+
+Cell[TextData[{
+ "We can use ",
+ Cell[BoxData[
+  ButtonBox["TransformedDistribution",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/TransformedDistribution"]]],
+ " in order to compute the distribution of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"S", "=", 
+    RowBox[{"X", "+", "Y"}]}], TraditionalForm]]],
+ "."
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[ScriptCapitalS]", "=", 
+   RowBox[{"TransformedDistribution", "[", 
+    RowBox[{
+     RowBox[{"X", "+", "Y"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"X", "\[Distributed]", "\[ScriptCapitalX]"}], ",", 
+       RowBox[{"Y", "\[Distributed]", "\[ScriptCapitalY]"}]}], "}"}]}], 
+    "]"}]}], ";"}]], "Input"],
+
+Cell[TextData[{
+ "The density at ",
+ Cell[BoxData[
+  FormBox["15", TraditionalForm]]],
+ " is"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"PDF", "[", 
+  RowBox[{"\[ScriptCapitalS]", ",", "15"}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "We can also compute ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["pdf", "X"], "\[Star]", 
+      SubscriptBox["pdf", "Y"]}], ")"}], 
+    RowBox[{"(", "15", ")"}]}], TraditionalForm]]],
+ "."
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Integrate", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"PDF", "[", 
+      RowBox[{"\[ScriptCapitalX]", ",", " ", "t"}], "]"}], " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{"\[ScriptCapitalY]", ",", " ", 
+       RowBox[{"15", " ", "-", "t"}]}], "]"}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "3", ",", "7"}], "}"}]}], "]"}], "+", 
+  RowBox[{"Integrate", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"PDF", "[", 
+      RowBox[{"\[ScriptCapitalX]", ",", " ", "t"}], "]"}], " ", 
+     RowBox[{"PDF", "[", 
+      RowBox[{"\[ScriptCapitalY]", ",", " ", 
+       RowBox[{"15", " ", "-", "t"}]}], "]"}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "10", ",", "15"}], "}"}]}], "]"}]}]], "Input"],
+
+Cell[TextData[{
+ "The ",
+ Cell[BoxData[
+  FormBox["pdf", TraditionalForm]]],
+ " is"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"PDF", "[", 
+  RowBox[{"\[ScriptCapitalS]", ",", "s"}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "Here a plot of the ",
+ Cell[BoxData[
+  FormBox["pdf", TraditionalForm]]],
+ ":"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Evaluate", "[", 
+    RowBox[{"PDF", "[", 
+     RowBox[{"\[ScriptCapitalS]", ",", "s"}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"s", ",", "10", ",", "25"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"HoldForm", "[", "s", "]"}], ",", 
+      RowBox[{"HoldForm", "[", 
+       RowBox[{"pdf", "[", "s", "]"}], "]"}]}], "}"}]}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"Directive", "[", 
+     RowBox[{
+      RowBox[{"Darker", "[", "Red", "]"}], ",", "Thick"}], "]"}]}], ",", 
+   RowBox[{"Exclusions", "\[Rule]", "None"}]}], "]"}]], "Input"],
+
+Cell["Try also to plot", "Text"],
+
+Cell["\<\
+Evaluate[
+Convolve[PDF[\[ScriptCapitalX],t],PDF[\[ScriptCapitalY],t],t,s]
+]\
+\>", "Program"],
+
+Cell[TextData[{
+ "The probability that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"12", "<", "S", "\[LessEqual]", "18"}], TraditionalForm]]],
+ " is"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"Probability", "[", 
+  RowBox[{
+   RowBox[{"12", "<", "S", "\[LessEqual]", "18"}], ",", 
+   RowBox[{"S", "\[Distributed]", "\[ScriptCapitalS]"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CDF", "[", 
+   RowBox[{"\[ScriptCapitalS]", ",", "18"}], "]"}], "-", 
+  RowBox[{"CDF", "[", 
+   RowBox[{"\[ScriptCapitalS]", ",", "12"}], "]"}]}]], "Input"],
+
+Cell[TextData[{
+ "Here a plot of the ",
+ Cell[BoxData[
+  FormBox["cdf", TraditionalForm]]],
+ ":"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Evaluate", "[", 
+    RowBox[{"CDF", "[", 
+     RowBox[{"\[ScriptCapitalS]", ",", "s"}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"s", ",", "12", ",", "25"}], "}"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"HoldForm", "[", "s", "]"}], ",", 
+      RowBox[{"HoldForm", "[", 
+       RowBox[{"cdf", "[", "s", "]"}], "]"}]}], "}"}]}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"Directive", "[", 
+     RowBox[{
+      RowBox[{"Darker", "[", "Red", "]"}], ",", "Thick"}], "]"}]}], ",", 
+   RowBox[{"Exclusions", "\[Rule]", "None"}]}], "]"}]], "Input"],
+
+Cell["Example 2", "Text",
+ CellDingbat->"\[EmptyCircle]"],
+
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "\"\<`*\>\"", "]"}]], "Input"],
+
+Cell[TextData[{
+ "Assume that we consider the sum of ",
+ Cell[BoxData[
+  FormBox["10", TraditionalForm]]],
+ " independent uniform rvs in the interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", "5"}], "]"}], TraditionalForm]]],
+ ". How does the distribution look like?"
+}], "Text"],
+
+Cell["We start with one random variable:", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[ScriptCapitalD]1", "=", 
+   RowBox[{"UniformDistribution", "[", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "5"}], "}"}], "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"PDF", "[", 
+  RowBox[{"\[ScriptCapitalD]1", ",", "t"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"p1", "=", 
+  RowBox[{"Plot", "[", 
+   RowBox[{
+    RowBox[{"PDF", "[", 
+     RowBox[{"\[ScriptCapitalD]1", ",", "t"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", 
+      RowBox[{"-", "1"}], ",", "6"}], "}"}], ",", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"HoldForm", "[", "t", "]"}], ",", 
+       RowBox[{"HoldForm", "[", 
+        RowBox[{
+         SubscriptBox["pdf", "1"], "[", "t", "]"}], "]"}]}], "}"}]}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"Directive", "[", 
+      RowBox[{
+       RowBox[{"Darker", "[", "Red", "]"}], ",", "Thick"}], "]"}]}]}], 
+   "]"}]}]], "Input"],
+
+Cell[TextData[{
+ "Looking at the sum of ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]]],
+ " independent rvs ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"i", "=", "1"}], "n"], 
+    SubscriptBox["X", "i"]}], TraditionalForm]]],
+ " where ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["X", "i"], "\[Distributed]", 
+    RowBox[{"U", "(", 
+     RowBox[{"0", ",", "5"}], ")"}]}], TraditionalForm]]],
+ " there is a built-in distribution: ",
+ Cell[BoxData[
+  ButtonBox["UniformSumDistribution",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/UniformSumDistribution"]]],
+ ". "
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[ScriptCapitalD]", "[", "n_", "]"}], ":=", 
+  RowBox[{"UniformSumDistribution", "[", 
+   RowBox[{"n", ",", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "5"}], "}"}]}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"PDF", "[", 
+  RowBox[{
+   RowBox[{"\[ScriptCapitalD]", "[", "2", "]"}], ",", "t"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"p2", "=", 
+  RowBox[{"Plot", "[", 
+   RowBox[{
+    RowBox[{"Evaluate", "[", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"\[ScriptCapitalD]", "[", "2", "]"}], ",", "t"}], "]"}], "]"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", 
+      RowBox[{"-", "1"}], ",", "11"}], "}"}], ",", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"HoldForm", "[", "t", "]"}], ",", 
+       RowBox[{"HoldForm", "[", 
+        RowBox[{
+         SubscriptBox["pdf", "2"], "[", "t", "]"}], "]"}]}], "}"}]}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"Directive", "[", 
+      RowBox[{
+       RowBox[{"Darker", "[", "Green", "]"}], ",", "Thick"}], "]"}]}], ",", 
+    RowBox[{"Exclusions", "\[Rule]", "None"}]}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"p3", "=", 
+  RowBox[{"Plot", "[", 
+   RowBox[{
+    RowBox[{"Evaluate", "[", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"\[ScriptCapitalD]", "[", "3", "]"}], ",", "t"}], "]"}], "]"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", 
+      RowBox[{"-", "1"}], ",", "16"}], "}"}], ",", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"HoldForm", "[", "t", "]"}], ",", 
+       RowBox[{"HoldForm", "[", 
+        RowBox[{
+         SubscriptBox["pdf", "3"], "[", "t", "]"}], "]"}]}], "}"}]}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"Directive", "[", 
+      RowBox[{
+       RowBox[{"Darker", "[", "Blue", "]"}], ",", "Thick"}], "]"}]}], ",", 
+    RowBox[{"Exclusions", "\[Rule]", "None"}]}], "]"}]}]], "Input"],
+
+Cell["\<\
+And finally the plot of the pdf of ten independent uniform rvs  (maybe you \
+recognize the shape). \
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{"p10", "=", 
+  RowBox[{"Plot", "[", 
+   RowBox[{
+    RowBox[{"Evaluate", "[", 
+     RowBox[{"PDF", "[", 
+      RowBox[{
+       RowBox[{"\[ScriptCapitalD]", "[", "10", "]"}], ",", "t"}], "]"}], 
+     "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", 
+      RowBox[{"-", "1"}], ",", "51"}], "}"}], ",", 
+    RowBox[{"AxesLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"HoldForm", "[", "t", "]"}], ",", 
+       RowBox[{"HoldForm", "[", 
+        RowBox[{
+         SubscriptBox["pdf", "10"], "[", "t", "]"}], "]"}]}], "}"}]}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Black", ",", "Thick"}], "]"}]}], ",", 
+    RowBox[{"Exclusions", "\[Rule]", "None"}]}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"p10", ",", "p3", ",", "p2", ",", "p1", ",", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"HoldForm", "[", "t", "]"}], ",", 
+      RowBox[{"HoldForm", "[", 
+       RowBox[{
+        SubscriptBox["pdf", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "2", ",", "3", ",", "10"}], "}"}]], "[", "t", 
+        "]"}], "]"}]}], "}"}]}]}], "]"}]], "Input"],
+
+Cell["\<\
+Now, the black function looks similar to a distribution I\[CloseCurlyQuote]ve \
+seen somewhere.\
+\>", "Text"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ " Normal Distribution"
+}], "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ ".",
+ 
+ CounterBox["Subsubsection"],
+ " Theory"
+}], "Subsubsection"],
+
+Cell[TextData[{
+ "According to the Central Limit Theorem (CLT) a sum ",
+ Cell[BoxData[
+  FormBox["\[GothicS]", TraditionalForm]]],
+ " of independent rvs ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[GothicX]", "i"], TraditionalForm]]],
+ " approaches the normal distribution when the number ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]]],
+ " of variables increases."
+}], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"i", "=", "1"}], "n"], 
+     SubscriptBox["\[GothicX]", "i"]}], "=", 
+    RowBox[{"\[GothicS]", 
+     OverscriptBox["\[Distributed]", "CLT"], 
+     RowBox[{"N", "(", 
+      RowBox[{"\[Mu]", ",", "\[Sigma]"}], ")"}]}]}], ",", " ", 
+   RowBox[{"\[Mu]", "=", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"i", "=", "1"}], "n"], 
+     RowBox[{"E", "[", 
+      SubscriptBox["\[GothicX]", "i"], "]"}]}]}], ",", " ", 
+   RowBox[{
+    SuperscriptBox["\[Sigma]", "2"], 
+    OverscriptBox["=", 
+     RowBox[{"indep", "."}]], 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"i", "=", "1"}], "n"], 
+     RowBox[{"V", "[", 
+      SubscriptBox["\[GothicX]", "i"], "]"}]}]}]}], 
+  TraditionalForm]], "DisplayFormula"],
+
+Cell[TextData[{
+ "The average ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["\[GothicX]", "_"], TraditionalForm]]],
+ " satisfies"
+}], "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "n"], 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "1"}], "n"], 
+      SubscriptBox["\[GothicX]", "i"]}]}], "=", 
+    RowBox[{
+     OverscriptBox["\[GothicX]", "_"], 
+     OverscriptBox["\[Distributed]", "CLT"], 
+     RowBox[{"N", "(", 
+      RowBox[{"\[Mu]", ",", "\[Sigma]"}], ")"}]}]}], ",", " ", 
+   RowBox[{"\[Mu]", "=", 
+    RowBox[{
+     FractionBox["1", "n"], 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "1"}], "n"], 
+      RowBox[{"E", "[", 
+       SubscriptBox["\[GothicX]", "i"], "]"}]}]}]}], ",", " ", 
+   RowBox[{
+    SuperscriptBox["\[Sigma]", "2"], 
+    OverscriptBox["=", 
+     RowBox[{"indep", "."}]], 
+    RowBox[{
+     FractionBox["1", 
+      SuperscriptBox["n", "2"]], 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "1"}], "n"], 
+      RowBox[{"V", "[", 
+       SubscriptBox["\[GothicX]", "i"], "]"}]}]}]}]}], 
+  TraditionalForm]], "DisplayFormula"],
+
+Cell[TextData[{
+ "If all ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[GothicX]", "i"], TraditionalForm]]],
+ " are iid (independent identical distributed) with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Mu]", "=", 
+    RowBox[{"E", "[", 
+     SubscriptBox["\[GothicX]", "i"], "]"}]}], TraditionalForm]],
+  CellChangeTimes->{{3.5251827091027575`*^9, 3.525182760458048*^9}}],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["\[Sigma]", "2"], "=", 
+    RowBox[{"V", "[", 
+     SubscriptBox["\[GothicX]", "i"], "]"}]}], TraditionalForm]]],
+ " we can write"
+}], "Text",
+ CellDingbat->"\[FivePointedStar]"],
+
+Cell[BoxData[
+ FormBox[
+  FrameBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "1"}], "n"], 
+      SubscriptBox["\[GothicX]", "i"]}], "\[LongEqual]", "\[GothicS]"}], 
+    OverscriptBox["\[Distributed]", "CLT"], 
+    RowBox[{"N", "(", 
+     RowBox[{
+      RowBox[{"n", " ", "\[Mu]"}], ",", 
+      RowBox[{
+       SqrtBox["n"], " ", "\[Sigma]"}]}], ")"}]}],
+   FrameStyle->RGBColor[1, 0, 0]], TraditionalForm]], "DisplayFormula"],
+
+Cell[BoxData[
+ FormBox[
+  FrameBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox["1", "n"], 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"i", "=", "1"}], "n"], 
+       SubscriptBox["\[GothicX]", "i"]}]}], "\[LongEqual]", 
+     OverscriptBox["\[GothicX]", "_"]}], 
+    OverscriptBox["\[Distributed]", "CLT"], 
+    RowBox[{"N", "(", 
+     RowBox[{"\[Mu]", ",", 
+      FractionBox["\[Sigma]", 
+       SqrtBox["n"]]}], ")"}]}],
+   FrameStyle->RGBColor[1, 0, 0]], TraditionalForm]], "DisplayFormula"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ".",
+ 
+ CounterBox["Subsection"],
+ ".",
+ 
+ CounterBox["Subsubsection"],
+ " Example"
+}], "Subsubsection"],
+
+Cell[TextData[{
+ "Example: Assume that we consider waiting times at a bus station ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Tau]", "i"], "\[Distributed]", 
+    RowBox[{"U", "(", 
+     RowBox[{"0", ",", "10"}], ")"}]}], TraditionalForm]]],
+ " minutes. If we compute the average waiting time ",
+ Cell[BoxData[
+  FormBox["\[Tau]", TraditionalForm]]],
+ " for 20 persons. What is the error in computing ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"P", "(", 
+    RowBox[{"\[Tau]", ">", "6"}], ")"}], TraditionalForm]]],
+ " if we use normal distribution as an approximation?"
+}], "Text"],
+
+Cell["We can compute the approximate probability with", "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"\[Mu]", "=", 
+   RowBox[{
+    RowBox[{"E", "[", 
+     SubscriptBox["\[Tau]", "i"], "]"}], "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"10", "-", "0"}], "2"], "=", "5"}]}]}], 
+  TraditionalForm]], "DisplayFormula"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SuperscriptBox["\[Sigma]", "2"], "=", " ", 
+   RowBox[{
+    RowBox[{"V", "[", 
+     SubscriptBox["\[Tau]", "i"], "]"}], "=", 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"10", "-", "0"}], ")"}], "2"], "12"], "=", 
+     FractionBox["25", "3"]}]}]}], TraditionalForm]], "DisplayFormula"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Therefore]", "\[Tau]"}], "=", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "20"], 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", "1"}], "20"], 
+      SubscriptBox["\[Tau]", "i"]}]}], "=", 
+    RowBox[{
+     RowBox[{"\[Tau]", 
+      OverscriptBox["\[Distributed]", "CLT"], 
+      RowBox[{"N", "(", 
+       RowBox[{"5", ",", 
+        FractionBox[
+         SqrtBox[
+          RowBox[{"25", "/", "3"}]], 
+         SqrtBox["20"]]}], ")"}]}], "=", 
+     RowBox[{"N", "(", 
+      RowBox[{"5", ",", " ", 
+       SqrtBox[
+        FractionBox["5", "12"]]}], ")"}]}]}]}], 
+  TraditionalForm]], "DisplayFormula"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"P", "(", 
+    RowBox[{"\[Tau]", ">", "6"}], ")"}], "=", 
+   RowBox[{
+    RowBox[{"1", "-", 
+     RowBox[{"cdf", "(", "6", ")"}]}], "=", 
+    RowBox[{
+     RowBox[{"1", "-", 
+      RowBox[{"\[CapitalPhi]", "(", 
+       FractionBox[
+        RowBox[{"6", "-", "5"}], 
+        RowBox[{" ", 
+         SqrtBox[
+          RowBox[{"5", "/", "12"}]]}]], ")"}]}], "\[TildeTilde]", 
+     RowBox[{"1", "-", 
+      RowBox[{"\[CapitalPhi]", "(", "1.55", ")"}]}], "\[TildeTilde]", 
+     "0.061"}]}]}], TraditionalForm]], "DisplayFormula"],
+
+Cell[TextData[{
+ "The probability is approximated with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"6.1", "%"}], TraditionalForm]]],
+ "."
+}], "Text"],
+
+Cell["Here's the calculation with Mathematica:", "Text"],
+
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "\"\<`*\>\"", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[ScriptCapitalU]", "=", 
+   RowBox[{"UniformDistribution", "[", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "10"}], "}"}], "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"\[Mu]", "=", 
+  RowBox[{"Mean", "[", "\[ScriptCapitalU]", "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"\[Sigma]", "=", 
+  RowBox[{"StandardDeviation", "[", "\[ScriptCapitalU]", "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[ScriptCapitalN]", "=", 
+   RowBox[{"NormalDistribution", "[", 
+    RowBox[{"\[Mu]", ",", 
+     FractionBox["\[Sigma]", 
+      SqrtBox["20"]]}], "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"Papprox", "=", 
+   RowBox[{"1", "-", 
+    RowBox[{"CDF", "[", 
+     RowBox[{"\[ScriptCapitalN]", ",", "6"}], "]"}]}]}], "]"}]], "Input"],
+
+Cell["\<\
+In order to compute the error we need the exact distribution, which is\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[ScriptCapitalS]", "=", 
+   RowBox[{"UniformSumDistribution", "[", 
+    RowBox[{"20", ",", 
+     FractionBox[
+      RowBox[{"{", 
+       RowBox[{"0", ",", "10"}], "}"}], "20"]}], "]"}]}], ";"}]], "Input"],
+
+Cell[TextData[{
+ "We use the ",
+ Cell[BoxData[
+  ButtonBox["UniformSumDistribution",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/UniformSumDistribution"]]],
+ " for ",
+ Cell[BoxData[
+  FormBox["20", TraditionalForm]]],
+ " rvs and scale each variable to the interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", 
+     RowBox[{"1", "/", "2"}]}], "]"}], TraditionalForm]]],
+ "."
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"Pexact", "=", 
+   RowBox[{"1", "-", 
+    RowBox[{"CDF", "[", 
+     RowBox[{"\[ScriptCapitalS]", ",", "6"}], "]"}]}]}], "]"}]], "Input"],
+
+Cell["The absolute error is then", "Text"],
+
+Cell[BoxData[
+ RowBox[{"absoluteError", "=", 
+  RowBox[{"N", "[", 
+   RowBox[{"Papprox", "-", "Pexact"}], "]"}]}]], "Input"],
+
+Cell[TextData[{
+ "So the absolute error is in this case ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"0.029", "pp"}], TraditionalForm]]],
+ " (",
+ ButtonBox["percentage points",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://en.wikipedia.org/wiki/Percentage_point"], None},
+  ButtonNote->"http://en.wikipedia.org/wiki/Percentage_point"],
+ "). The relative error is "
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"relativeError", "=", 
+  FractionBox["absoluteError", "Pexact"]}]], "Input"],
+
+Cell[TextData[{
+ "I.e. the relative error is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"4.7", "\:2030"}], TraditionalForm]]],
+ "."
+}], "Text"],
+
+Cell["\<\
+We finish with a graphical comparison between the exact distribution and the \
+normal approximation:\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"PDF", "[", 
+      RowBox[{"\[ScriptCapitalN]", ",", "t"}], "]"}], ",", 
+     RowBox[{"PDF", "[", 
+      RowBox[{"\[ScriptCapitalS]", ",", "t"}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "2", ",", "8"}], "}"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"Dashed", ",", "Red"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"Dashed", ",", "Gray"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"HoldForm", "[", "t", "]"}], ",", 
+      RowBox[{"HoldForm", "[", 
+       RowBox[{"pdf", "[", "t", "]"}], "]"}]}], "}"}]}]}], "]"}]], "Input"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ ". Mathematical Task"
+}], "Section"],
+
+Cell["\<\
+Required for grade E (approved). Keep in mind that it is the mathematical \
+method on the task that is interesting to consider, not the answer. \
+Furthermore, solve the given task, not a variant or extension. A very good \
+report and presentation is graded D.\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell["The Relative Error of Normal Approximation", "Subsection",
+ ShowGroupOpener->False],
+
+Cell["\<\
+If you consider the average of 20 iid rvs, normal distribution is often \
+considered as a good approximation. However in this task you will go beyond \
+this recommendation and study under what circumstances it is valid. The \
+exponential distribution is very skew compared to the uniform distribution. \
+How is this effecting the approximation with normal distribution?\
+\>", "Text"],
+
+Cell[TextData[{
+ "In a certain cellular phone system new calls arrives with exponential \
+distributed interarrivaltimes with expectation value ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Mu]", "=", 
+    RowBox[{
+     SuperscriptBox["\[Lambda]", 
+      RowBox[{"-", "1"}]], "=", "3"}]}], TraditionalForm]]],
+ " minutes. The interarrivaltime is the time between two incoming calls."
+}], "Text"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {Arrowheads[{{Automatic, Automatic, 
+       GraphicsBox[
+        LineBox[
+         NCache[{{
+            Rational[-1, 4], 
+            Rational[1, 8]}, {0, 0}, {
+            Rational[-1, 4], 
+            Rational[-1, 8]}}, {{-0.25, 0.125}, {0, 
+           0}, {-0.25, -0.125}}]]]}}], ArrowBox[{{-1, 1}, {7, 1}}]}, 
+   ArrowBox[{{0, 0}, {0, 1}}], ArrowBox[{{1, 0}, {1, 1}}], 
+   ArrowBox[{{4, 0}, {4, 1}}], ArrowBox[{{6, 0}, {6, 1}}], 
+   {Arrowheads[{{Automatic, Automatic, 
+       GraphicsBox[
+        LineBox[
+         NCache[{{
+            Rational[1, 4], 
+            Rational[1, 8]}, {0, 0}, {
+            Rational[1, 4], 
+            Rational[-1, 8]}}, {{0.25, 0.125}, {0, 0}, {0.25, -0.125}}]]]}, {
+      Automatic, Automatic, 
+       GraphicsBox[
+        LineBox[
+         NCache[{{
+            Rational[-1, 4], 
+            Rational[1, 8]}, {0, 0}, {
+            Rational[-1, 4], 
+            Rational[-1, 8]}}, {{-0.25, 0.125}, {0, 
+           0}, {-0.25, -0.125}}]]]}}], ArrowBox[{{0, 0.1}, {1, 0.1}}], 
+    ArrowBox[{{1, 0.1}, {4, 0.1}}], ArrowBox[{{4, 0.1}, {6, 0.1}}]}, 
+   InsetBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Tau]\\), \\(k - 1\\)]\\)\"\>", \
+{0, 1.2}], 
+   InsetBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Tau]\\), \\(k\\)]\\)\"\>", \
+{1, 1.2}], 
+   InsetBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Tau]\\), \\(k + 1\\)]\\)\"\>", \
+{4, 1.2}], 
+   InsetBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Tau]\\), \\(k + 2\\)]\\)\"\>", \
+{6, 1.2}], 
+   InsetBox["\<\"\\!\\(\\*SubscriptBox[\\(t\\), \\(k\\)]\\)\"\>", {0.5, 0.3}],
+    InsetBox["\<\"\\!\\(\\*SubscriptBox[\\(t\\), \\(k + 1\\)]\\)\"\>", \
+{2.5, 0.3}], 
+   InsetBox["\<\"\\!\\(\\*SubscriptBox[\\(t\\), \\(k + 2\\)]\\)\"\>", \
+{5, 0.3}], InsetBox["\<\"time\"\>", {7.3, 1}]},
+  BaseStyle->{16, FontFamily -> "Times"},
+  ImageSize->{638., Automatic}]], "Output",
+ ShowCellBracket->Automatic],
+
+Cell[CellGroupData[{
+
+Cell["Task", "Subsubsection",
+ ShowGroupOpener->False],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Study the average ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    OverscriptBox["t", "_"], "=", 
+    RowBox[{
+     FractionBox["1", "n"], " ", 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"k", "=", "1"}], "n"], 
+      SubscriptBox["t", "k"]}]}]}], TraditionalForm]]],
+ " of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "=", "20"}], TraditionalForm]]],
+ " interarrival times. Plot the absolute error of the ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["pdf", 
+     OverscriptBox["t", "_"]], "(", "t", ")"}], TraditionalForm]]],
+ " and the ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["cdf", 
+     OverscriptBox["t", "_"]], "(", "t", ")"}], TraditionalForm]]],
+ " using the normal approximation. Make also a plot of the relative error of"
+}], "Item"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"P", "(", 
+    RowBox[{
+     OverscriptBox["t", "_"], ">", "x"}], ")"}], ",", " ", 
+   RowBox[{
+    RowBox[{"\[Mu]", "-", 
+     RowBox[{"2", 
+      RowBox[{"\[Sigma]", "/", 
+       SqrtBox["n"]}]}]}], "<", "x", "<", 
+    RowBox[{"\[Mu]", "+", 
+     RowBox[{"2", 
+      RowBox[{"\[Sigma]", "/", 
+       SqrtBox["n"]}]}]}]}]}], TraditionalForm]]]], "ItemParagraph"],
+
+Cell["Conclusion? Is the approximation always useful?", "ItemParagraph"],
+
+Cell[TextData[{
+ StyleBox["Hint:",
+  FontSlant->"Italic"],
+ " The sum of iid exponential rvs has a well-known distribution, which is \
+built-in in Mathematica, ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["ErlangDistribution",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/ErlangDistribution"], "[", 
+   RowBox[{
+    StyleBox["n", "TI"], ",", 
+    StyleBox["\[Lambda]", "TR"]}], "]"}]]],
+ " or ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["GammaDistribution",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/GammaDistribution"], "[", 
+   RowBox[{
+    StyleBox["n", "TI"], ",", 
+    StyleBox[
+     RowBox[{"1", "/", "\[Lambda]"}], "TR"]}], "]"}]]],
+ "."
+}], "Subitem"],
+
+Cell["\<\
+Study the number of incoming calls during one hour. Plot the absolute and \
+relative error of the probability function using normal approximation. \
+Conclusion?\
+\>", "Item"],
+
+Cell[TextData[{
+ StyleBox["Hint:",
+  FontSlant->"Italic"],
+ " What is the distribution of the number of events in a certain time \
+interval, e.g ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", 
+    StyleBox["h",
+     FontSlant->"Plain"]}], TraditionalForm]]],
+ ", if the time between the events is exponential?"
+}], "Subitem"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Optional Task", "Subsubsection",
+ ShowGroupOpener->False],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Repeat the first part above for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "=", "100"}], TraditionalForm]]],
+ " interarrival times. Conclusion?"
+}], "Item"],
+
+Cell["Repeat the second part above for 5 hours. Conclusion?", "Item"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+},
+DockedCells->Cell[
+  BoxData[
+   GridBox[{{
+      GraphicsBox[
+       TagBox[
+        RasterBox[CompressedData["
+1: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
+LM25+gC4Gk0zbbIZnXq94rjZVYVtbpjOg1jJ9Y4OY9fUvopkc6SfIg+kvYNU
+V6kn4pRWUnuyuGIRbRC5689LMuScMI8H24HoIPmBM0qHq4vw5CA8JCP6j5dN
+aZmbNeeCepgO8R64Ck8pxoy2ogVrAGmeWxo0IKTl04yrytqmk+bxGMRDJnH3
+bn+JYtFYWZyHwdVBAdnPOmlxlfPtRc4kA5I9VV34uq64sKw2M78Ko4NfedSx
+AXa07p8+/XuQUuzfwRX1RiDLQbMOeF8vJv2w7lzIzxscqGZMArmCBp+62XnF
+6UD74GymCj+DPat+3/Frt+HKK7qAuUZIdzou2CSBMMhoSRJ+PoW4eoBPe3vb
+A+NqiKpgwkYnts8o9MyAmpi4yfl1HTFniqEdHYtPFlseoylek3MrFP5wJfvm
+Mx8kw+ojx5XkUnQ57t355iY0I7Rr+PV1VHzNOuCjudczPf9mSZqC0rqZ+7yI
+O+j9O1ffhqvgxBswDa7dWjR8Lze6N4vkfSpxVVzZsPps8MKjfktP+N+7LT7m
+D2qanl/5MPKKvIUyf835oK555uOzyn7e6Pg7TQa44Igfq8RxwTaJJKt8FCFg
+j9ZP5ucNjtKk/ft50X/bkQweyjvcWYoY8IQzVgkrTgV+vNCCbqw8CAu6k7f3
+ocnYmTUtdXRZSwvvPrzH6ePAVXZRtQzN6wJ6ee/WV8G4j7xxWHLxQ+JKTluM
+Dv9imRVm+jmbxHi6bXo1sxwqj03Dyw4SL5HMgirokeFqT9G+c+/pRn9Qr3Xv
+mPwZ291A1MOSb5RWNXy13JYVPIIEG6Eu7DXNaDh173mwtZHbcZVG1hlem240
+fYtLZ2kGAq3mljbdA969FYwfUmQ92XUGQGjUg65f3f4M1LZ6earhO3PNmCEQ
+m1n2zSrb9o52m4DsQSoC6JSYDOLBu/S4P/jME8cVYVbUi2yAoiSWLf5aGakz
+pSqoqm3yjyvgjNX7fpVdOg2f36oX3vuWXBP33UV3Wb+iizy4rPY+T+bmxKRW
+VV3ztK2ufeQfqoseE67ev6/1q0eEK1AmTLTT1MkhKq0Ez/DKVKOswqqknIpX
+pxlP3OTEiPEvvzkNkbhMiB5sjB4KV7Ra1mBS6cy4D02VA5tihIbIjGY2xsc5
+NBfj6x6ZC/V93iaRZfHV3u8lcXNlYuSh+ZUUV7LaJpBaIKUsty2DVmFZ3ber
+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
+qKLuZg0LxbnW2MJBMTlwKPCzCKkePwxsWe2BK1o08ItUavGt4bPIMamJeaBt
+7Z8KSg+fMlTPFjx89FKn6lrqx0RoHJ1CydJTHgnn2cgDEEv4izb8ss/eGsRK
+0K+lU+mIa2iGxJcoh2NwOq4tIprr1KYhVdCSvLkA7JHSa5EJlB2duMkTdgk3
+BbeG3yCWN25LObJ2wlWz0W6peKRu9OnbqI3lQgKrgWe56HWHQ/vNlBSWVmUX
+lC9jnVbccOE7ZuaVNTQ0jFnprNBcq9C5/r76qolVtlDTU3TybXA80LDcosrq
+mjrENYhzE28UgdOCY/xud1Uw5TQ4Ia4qAqiPV7vSpAxZObTMDj9+dWvr1V72
+6u41mBUjgX/ywobf7K52VTFXZhOZQS+5ohdvENtqcgF2W17TMo6pMyHcU3gk
+/aXnZPVRk01V872Uja0KX8aTbIiYOGtVMvYqLq9BvAmyasFS1qBVvKulXT9Y
+x+CKlg6lGWfu8OX5osiE/PEbPQ45xYHej1nlwjV/QMZen2fTQ1U4xdirsbEx
+ObsYPOERxEyem4W4z/LdRfbgVOVVdR+tcobJGmngyE+7vCIzPzV0Kyip+sbk
+gtqOs0mZFBvmFlZ8ZsiGCeo8KFv4+KuDcEWpAEteBjDtG+/wuHyWsazX3x+Y
+llNi5Z/2Mh3BeLyhZ6swi9o23cIoZ/6t6UXBRBOE+fKz2iZIeTYWmwFB1c5c
+9E8wyZRXep9yT+g5Q6TAdLQAHjl1i3NXckPjclf+ISvnA18dR+k+rkrXvtSi
+w+yVIpsJ2EdD3Iu4ooT3kvtduqnEiq8IQpNMuZQQN+yx6YUaO84iWLYJTEMg
+2Vf9EQc0P4OLFerLqVlM2ezlFJxu6pUIL5CVXw7f98lqt1dmWZLQ0OTTx1zi
+G5sav1jvnnDjTkND4+qDVPpIIiQ0FlzaJsXGD7zdHYSr/rOk7y11kvqnpuWU
+JmcV877a5Kw7gilmXLFh9g9+3dloe16OFXQlJ7dIJvuDl4xY7PCACsnna1G2
+VjKOfJxM3C8psziMlcFsNb3QQ1UEgmrIDtTWHwmD/S+prOb7NDW7JPVmyWnP
+xLcWPNR06cdZHcTb2fkLr/asq2uoqKqtrK7Nul2x6Xg47xG+kIj9Vos4RTDR
+9Hfbv0qk9kljeH5+jySaKro7veEcdsSvKuYFOcfd4vmkGP6gSR/jT6luJYPv
+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
+aqnLOEO3/wc/y2U7
+         "], {{0, 200}, {200, 0}}, {0, 255}, ColorFunction -> RGBColor], 
+        BoxForm`ImageTag[
+        "Byte", ColorSpace -> "RGB", ImageSize -> Automatic, Interleaving -> 
+         True, Magnification -> Automatic], Selectable -> False], BaseStyle -> 
+       "ImageGraphics", ImageSize -> {60., Automatic}, 
+       ImageSizeRaw -> {200, 200}, PlotRange -> {{0, 200}, {0, 200}}, 
+       ImageMargins -> {{27, 0}, {0, 0}}], 
+      StyleBox[
+       RowBox[{"KTH/ICT", " ", "-", " ", "Communication", " ", "Systems"}], 
+       "Text", FontFamily -> "Arial Narrow", FontSize -> 16, FontWeight -> 
+       "Bold", FontColor -> GrayLevel[0.501961]]}}, ColumnAlignments -> Left, 
+    ColumnSpacings -> 1.6]], CellMargins -> {{0, 0}, {0, 0}}, Magnification -> 
+  1., Background -> GrayLevel[0.99999]],
+PageHeaders->{{None, None, None}, {
+   Cell[
+    TextData[{"KTH/ICT - Communication Systems"}], "PageHeader", FontFamily -> 
+    "Arial", FontSize -> 9], None, None}},
+PageFooters->{{None, None, None}, {None, 
+   Cell[
+    TextData[{
+      CounterBox["Page"]}], "PageNumber"], None}},
+PrintingOptions->{"FacingPages"->False},
+TrackCellChangeTimes->True,
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell["Modify the definitions below to change the default appearance of all \
+cells in a given style. \nMake modifications to any definition using commands \
+in the Format menu.", "Text"], 
+   Cell[
+    CellGroupData[{
+      Cell["Notebook Options Settings", "Section"], 
+      Cell[
+       StyleData["Notebook"], ShowCellBracket -> Automatic]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Title and Section Cells", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell["Title", "Subsection"], 
+         Cell[
+          StyleData["Title"], FontFamily -> "Arial", FontSize -> 36, 
+          FontWeight -> "Bold", FontColor -> GrayLevel[0.5]], 
+         Cell[
+          StyleData["Subtitle"], FontFamily -> "Arial", FontWeight -> "Bold"], 
+         Cell[
+          StyleData["Subsubtitle"], FontFamily -> "Arial", FontSize -> 18]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+         "Chapter", "Subsection", 
+          CellChangeTimes -> {{3.6182073006504073`*^9, 
+           3.6182073204926414`*^9}}], 
+         Cell[
+          StyleData["Chapter"], FontFamily -> "Arial", FontSize -> 34, 
+          FontWeight -> "Plain", FontSlant -> "Plain", 
+          FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}], 
+         Cell[
+          StyleData["Subchapter"], CellDingbat -> 
+          StyleBox["\[FilledSmallSquare]", Alignment -> Baseline, 
+            RGBColor[
+            0.09803921568627451, 0.32941176470588235`, 0.6509803921568628]], 
+          FontFamily -> "Arial", FontSize -> 28, FontWeight -> "Plain", 
+          FontSlant -> "Plain", 
+          FontVariations -> {
+           "StrikeThrough" -> False, "Underline" -> False}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell["Section", "Subsection"], 
+         Cell[
+          StyleData["Section"], CellDingbat -> None, ShowGroupOpener -> True, 
+          FontFamily -> "Arial", FontSize -> 24, FontWeight -> "Bold", 
+          FontColor -> GrayLevel[0.5]], 
+         Cell[
+          StyleData["Subsection"], CellDingbat -> None, ShowGroupOpener -> 
+          True, CellMargins -> {{40., 3.}, {8., 12.}}, FontFamily -> "Arial", 
+          FontSize -> 18, FontWeight -> "Bold", FontColor -> GrayLevel[0.3]], 
+         Cell[
+          StyleData["Subsubsection"], CellDingbat -> None, ShowGroupOpener -> 
+          True, CellMargins -> {{53., Inherited}, {2, 10}}, FontFamily -> 
+          "Arial", FontSize -> 16, FontWeight -> "Bold", FontColor -> 
+          GrayLevel[0.]], 
+         Cell[
+          StyleData["Subsubsubsection"], CellDingbat -> None, ShowGroupOpener -> 
+          True, MenuSortingValue -> 1400, FontFamily -> "Arial Narrow", 
+          FontSize -> 14, FontWeight -> "Bold", FontSlant -> "Plain", 
+          FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}, 
+          FontColor -> GrayLevel[0]]}, Closed]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Body Text", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell["Standard", "Subsection"], 
+         Cell[
+          StyleData["Text"], FontFamily -> "Times"], 
+         Cell[
+          StyleData["SmallText"], MenuSortingValue -> 1425, FontFamily -> 
+          "Times"]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell["Display", "Subsection"], 
+         Cell[
+          CellGroupData[{
+            Cell["Lists", "Subsubsection"], 
+            Cell[
+             StyleData["Item"], CellDingbat -> 
+             StyleBox["\[FilledCircle]", Alignment -> Baseline, 
+               GrayLevel[0.3]], FontFamily -> "Times"], 
+            Cell[
+             StyleData["ItemParagraph"], FontFamily -> "Times"], 
+            Cell[
+             StyleData["Subitem"], CellDingbat -> 
+             StyleBox["\[FilledSmallCircle]", Alignment -> Baseline, 
+               GrayLevel[0.3]], FontFamily -> "Times"], 
+            Cell[
+             StyleData["SubitemParagraph"], FontFamily -> "Times"], 
+            Cell[
+             StyleData["Subsubitem"], CellDingbat -> 
+             StyleBox["\[FilledSmallCircle]", Alignment -> Baseline, 
+               GrayLevel[0.5]], FontFamily -> "Times"], 
+            Cell[
+             StyleData["SubsubitemParagraph"], FontFamily -> "Times"], 
+            Cell[
+             StyleData["ItemNumbered"], FontFamily -> "Times"], 
+            Cell[
+             StyleData["SubitemNumbered"], FontFamily -> "Times"], 
+            Cell[
+             StyleData["SubsubitemNumbered"], FontFamily -> "Times"]}, 
+           Closed]], 
+         Cell[
+          CellGroupData[{
+            Cell["Templates", "Subsubsection"], 
+            Cell[
+             StyleData[
+             "SideCaptionArray", StyleDefinitions -> StyleData["Text"]], 
+             GridBoxOptions -> {
+              GridBoxAlignment -> {"Columns" -> {Left}, "Rows" -> {Center}}, 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}}], 
+            Cell[
+             StyleData[
+             "SideCaption", StyleDefinitions -> StyleData["SmallText"]]]}, 
+           Closed]]}, Closed]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Input and Output Cells", "Section"], 
+      Cell[
+       StyleData["Input"], ShowCellBracket -> True], 
+      Cell[
+       StyleData["InputOnly"], ShowCellBracket -> True], 
+      Cell[
+       StyleData["Code"], ShowCellBracket -> True], 
+      Cell[
+       StyleData["Output"], ShowCellBracket -> True], 
+      Cell[
+       StyleData["Message"], ShowCellBracket -> True], 
+      Cell[
+       StyleData["Print"], ShowCellBracket -> True]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Formulas and Programming", "Section"], 
+      Cell[
+       StyleData["InlineFormula"]], 
+      Cell[
+       StyleData["DisplayFormula"], FontFamily -> "Times"], 
+      Cell[
+       StyleData["DisplayFormulaNumbered"], FontFamily -> "Times"], 
+      Cell[
+       StyleData["Program"], ShowCellBracket -> True]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Citation Styles", "Section"], 
+      Cell[
+       StyleData["Reference"]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell[
+       TextData[{"Styles for ", 
+         StyleBox["Mathematica", FontSlant -> "Italic"], 
+         " System\[Hyphen]specific Elements"}], "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell["Default Box Styles", "Subsection"], 
+         Cell[
+          StyleData["Graphics"], FontFamily -> "Times"], 
+         Cell[
+          StyleData["Graphics3D"], FontFamily -> "Times"], 
+         Cell[
+          StyleData["NetworkGraphics"], FontFamily -> "Times"]}, Closed]]}, 
+     Closed]]}, Visible -> False, FrontEndVersion -> 
+  "10.3 for Microsoft Windows (64-bit) (October 9, 2015)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 103, 4, 83, "Title"],
+Cell[686, 28, 187, 7, 42, "Text"],
+Cell[CellGroupData[{
+Cell[898, 39, 91, 4, 60, "Section"],
+Cell[992, 45, 596, 9, 106, "Text"],
+Cell[1591, 56, 364, 7, 68, "Text"],
+Cell[1958, 65, 130, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[2113, 72, 105, 7, 41, "Subsection"],
+Cell[2221, 81, 71, 0, 30, "Text"],
+Cell[CellGroupData[{
+Cell[2317, 85, 47, 0, 29, "Item"],
+Cell[2367, 87, 28, 0, 29, "Item"],
+Cell[2398, 89, 66, 0, 29, "Item"],
+Cell[2467, 91, 63, 0, 29, "Item"],
+Cell[CellGroupData[{
+Cell[2555, 95, 54, 0, 25, "Subitem"],
+Cell[2612, 97, 38, 0, 25, "Subitem"],
+Cell[2653, 99, 39, 0, 25, "Subitem"],
+Cell[2695, 101, 36, 0, 25, "Subitem"]
+}, Open  ]],
+Cell[2746, 104, 101, 2, 29, "Item"]
+}, Open  ]],
+Cell[2862, 109, 117, 3, 30, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3016, 117, 43, 0, 33, "Subsection"],
+Cell[3062, 119, 62, 0, 30, "Text"],
+Cell[CellGroupData[{
+Cell[3149, 123, 75, 0, 29, "Item"],
+Cell[3227, 125, 95, 2, 29, "Item"],
+Cell[3325, 129, 33, 0, 29, "Item"],
+Cell[3361, 131, 33, 0, 29, "Item"],
+Cell[3397, 133, 39, 0, 29, "Item"]
+}, Open  ]],
+Cell[3451, 136, 109, 3, 30, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3597, 144, 116, 7, 33, "Subsection"],
+Cell[3716, 153, 656, 11, 125, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[4409, 169, 104, 7, 33, "Subsection"],
+Cell[4516, 178, 346, 10, 68, "Text"],
+Cell[4865, 190, 258, 4, 49, "Text"],
+Cell[5126, 196, 171, 3, 49, "Text"],
+Cell[5300, 201, 102, 2, 30, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5439, 208, 110, 7, 33, "Subsection"],
+Cell[CellGroupData[{
+Cell[5574, 219, 100, 2, 29, "Item"],
+Cell[5677, 223, 148, 5, 30, "Item"],
+Cell[5828, 230, 456, 8, 80, "Item"],
+Cell[6287, 240, 114, 3, 29, "Item"],
+Cell[6404, 245, 732, 22, 99, "Item"],
+Cell[7139, 269, 466, 13, 81, "Item"],
+Cell[7608, 284, 135, 3, 29, "Item"],
+Cell[7746, 289, 302, 5, 62, "Item"],
+Cell[8051, 296, 204, 4, 45, "Item"]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[8316, 307, 74, 4, 46, "Section"],
+Cell[CellGroupData[{
+Cell[8415, 315, 104, 7, 41, "Subsection"],
+Cell[8522, 324, 172, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[8719, 331, 80, 1, 21, "SubitemParagraph"],
+Cell[8802, 334, 76, 1, 21, "SubitemParagraph"],
+Cell[8881, 337, 68, 1, 21, "SubitemParagraph"],
+Cell[8952, 340, 76, 1, 21, "SubitemParagraph"],
+Cell[9031, 343, 71, 1, 21, "SubitemParagraph"]
+}, Open  ]],
+Cell[9117, 347, 128, 3, 30, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[9282, 355, 110, 7, 33, "Subsection"],
+Cell[9395, 364, 316, 7, 69, "Text"],
+Cell[CellGroupData[{
+Cell[9736, 375, 163, 10, 31, "Subsubsection"],
+Cell[9902, 387, 764, 26, 53, "Text"],
+Cell[10669, 415, 634, 21, 29, "DisplayFormula"],
+Cell[11306, 438, 242, 8, 30, "Text"],
+Cell[11551, 448, 830, 27, 46, "DisplayFormula"],
+Cell[12384, 477, 953, 32, 81, "Text"],
+Cell[13340, 511, 529, 18, 51, "Text"],
+Cell[13872, 531, 469, 18, 50, "Text"],
+Cell[14344, 551, 324, 11, 55, "DisplayFormula"],
+Cell[14671, 564, 72, 0, 30, "Text"],
+Cell[14746, 566, 466, 16, 46, "DisplayFormula"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[15249, 587, 157, 10, 25, "Subsubsection"],
+Cell[15409, 599, 657, 21, 70, "Text"],
+Cell[16069, 622, 429, 11, 70, "Text"],
+Cell[16501, 635, 588, 17, 48, "Program"],
+Cell[17092, 654, 264, 8, 49, "Text"],
+Cell[17359, 664, 57, 1, 30, "Text"],
+Cell[17419, 667, 207, 7, 30, "Text"],
+Cell[17629, 676, 70, 1, 31, "Input"],
+Cell[17702, 679, 608, 17, 72, "Input"],
+Cell[18313, 698, 325, 12, 31, "Text"],
+Cell[18641, 712, 357, 10, 31, "Input"],
+Cell[19001, 724, 56, 0, 30, "Text"],
+Cell[19060, 726, 96, 2, 31, "Input"],
+Cell[19159, 730, 263, 11, 32, "Text"],
+Cell[19425, 743, 372, 10, 31, "Input"],
+Cell[19800, 755, 36, 0, 30, "Text"],
+Cell[19839, 757, 723, 23, 47, "DisplayFormula"],
+Cell[20565, 782, 107, 5, 30, "Text"],
+Cell[20675, 789, 470, 13, 52, "Input"],
+Cell[21148, 804, 310, 11, 32, "Text"],
+Cell[21461, 817, 115, 4, 80, "Program"],
+Cell[21579, 823, 172, 7, 30, "Text"],
+Cell[21754, 832, 198, 4, 31, "Input"],
+Cell[21955, 838, 108, 5, 30, "Text"],
+Cell[22066, 845, 701, 18, 72, "Input"],
+Cell[22770, 865, 57, 1, 30, "Text"],
+Cell[22830, 868, 70, 1, 31, "Input"],
+Cell[22903, 871, 295, 5, 68, "Text"],
+Cell[23201, 878, 424, 13, 51, "Text"],
+Cell[23628, 893, 713, 23, 68, "Input"],
+Cell[24344, 918, 201, 6, 30, "Text"],
+Cell[24548, 926, 54, 1, 31, "Input"],
+Cell[24605, 929, 115, 3, 30, "Text"],
+Cell[24723, 934, 235, 6, 31, "Input"],
+Cell[24961, 942, 73, 0, 30, "Text"],
+Cell[25037, 944, 80, 2, 31, "Input"],
+Cell[25120, 948, 109, 3, 31, "Input"],
+Cell[25232, 953, 55, 0, 30, "Text"],
+Cell[25290, 955, 365, 12, 57, "Input"],
+Cell[25658, 969, 57, 1, 31, "Input"],
+Cell[25718, 972, 168, 3, 49, "Text"],
+Cell[25889, 977, 266, 7, 52, "Input"],
+Cell[26158, 986, 54, 1, 31, "Input"],
+Cell[26215, 989, 78, 2, 46, "Input"],
+Cell[26296, 993, 315, 11, 30, "Text"],
+Cell[26614, 1006, 376, 10, 49, "Text"],
+Cell[26993, 1018, 125, 3, 31, "Input"],
+Cell[27121, 1023, 393, 13, 49, "Text"],
+Cell[27517, 1038, 150, 4, 31, "Input"],
+Cell[27670, 1044, 131, 3, 30, "Text"],
+Cell[27804, 1049, 263, 9, 31, "Input"],
+Cell[28070, 1060, 389, 11, 31, "Input"],
+Cell[28462, 1073, 116, 3, 30, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[28615, 1081, 165, 10, 25, "Subsubsection"],
+Cell[28783, 1093, 758, 26, 53, "Text"],
+Cell[29544, 1121, 235, 7, 29, "DisplayFormula"],
+Cell[29782, 1130, 283, 8, 46, "Text"],
+Cell[30068, 1140, 796, 24, 56, "DisplayFormula"],
+Cell[30867, 1166, 1003, 34, 81, "Text"],
+Cell[31873, 1202, 529, 18, 51, "Text"],
+Cell[32405, 1222, 325, 10, 49, "Text"],
+Cell[32733, 1234, 508, 16, 56, "DisplayFormula"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[33278, 1255, 159, 10, 25, "Subsubsection"],
+Cell[33440, 1267, 524, 16, 50, "Text"],
+Cell[33967, 1285, 842, 34, 74, "Text"],
+Cell[34812, 1321, 597, 17, 54, "Program"],
+Cell[35412, 1340, 57, 1, 30, "Text"],
+Cell[35472, 1343, 86, 2, 30, "Text"],
+Cell[35561, 1347, 70, 1, 31, "Input"],
+Cell[35634, 1350, 350, 10, 52, "Input"],
+Cell[35987, 1362, 325, 12, 31, "Text"],
+Cell[36315, 1376, 357, 10, 31, "Input"],
+Cell[36675, 1388, 105, 5, 30, "Text"],
+Cell[36783, 1395, 96, 2, 31, "Input"],
+Cell[36882, 1399, 265, 11, 32, "Text"],
+Cell[37150, 1412, 745, 21, 52, "Input"],
+Cell[37898, 1435, 95, 5, 30, "Text"],
+Cell[37996, 1442, 95, 2, 31, "Input"],
+Cell[38094, 1446, 108, 5, 30, "Text"],
+Cell[38205, 1453, 670, 18, 72, "Input"],
+Cell[38878, 1473, 32, 0, 30, "Text"],
+Cell[38913, 1475, 102, 4, 80, "Program"],
+Cell[39018, 1481, 157, 6, 30, "Text"],
+Cell[39178, 1489, 187, 4, 31, "Input"],
+Cell[39368, 1495, 191, 5, 31, "Input"],
+Cell[39562, 1502, 108, 5, 30, "Text"],
+Cell[39673, 1509, 670, 18, 72, "Input"],
+Cell[40346, 1529, 57, 1, 30, "Text"],
+Cell[40406, 1532, 70, 1, 31, "Input"],
+Cell[40479, 1535, 305, 10, 49, "Text"],
+Cell[40787, 1547, 50, 0, 30, "Text"],
+Cell[40840, 1549, 182, 5, 31, "Input"],
+Cell[41025, 1556, 96, 2, 31, "Input"],
+Cell[41124, 1560, 673, 20, 52, "Input"],
+Cell[41800, 1582, 640, 24, 52, "Text"],
+Cell[42443, 1608, 219, 6, 31, "Input"],
+Cell[42665, 1616, 124, 3, 31, "Input"],
+Cell[42792, 1621, 801, 23, 72, "Input"],
+Cell[43596, 1646, 800, 23, 72, "Input"],
+Cell[44399, 1671, 123, 3, 30, "Text"],
+Cell[44525, 1676, 767, 22, 72, "Input"],
+Cell[45295, 1700, 486, 13, 55, "Input"],
+Cell[45784, 1715, 119, 3, 30, "Text"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[45952, 1724, 118, 7, 33, "Subsection"],
+Cell[CellGroupData[{
+Cell[46095, 1735, 146, 10, 31, "Subsubsection"],
+Cell[46244, 1747, 384, 12, 49, "Text"],
+Cell[46631, 1761, 843, 27, 55, "DisplayFormula"],
+Cell[47477, 1790, 141, 6, 30, "Text"],
+Cell[47621, 1798, 1043, 35, 55, "DisplayFormula"],
+Cell[48667, 1835, 621, 21, 30, "Text"],
+Cell[49291, 1858, 484, 15, 65, "DisplayFormula"],
+Cell[49778, 1875, 531, 17, 65, "DisplayFormula"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[50346, 1897, 147, 10, 25, "Subsubsection"],
+Cell[50496, 1909, 595, 17, 68, "Text"],
+Cell[51094, 1928, 63, 0, 30, "Text"],
+Cell[51160, 1930, 255, 9, 44, "DisplayFormula"],
+Cell[51418, 1941, 369, 12, 47, "DisplayFormula"],
+Cell[51790, 1955, 681, 24, 60, "DisplayFormula"],
+Cell[52474, 1981, 570, 18, 50, "DisplayFormula"],
+Cell[53047, 2001, 145, 6, 30, "Text"],
+Cell[53195, 2009, 56, 0, 30, "Text"],
+Cell[53254, 2011, 70, 1, 31, "Input"],
+Cell[53327, 2014, 182, 5, 31, "Input"],
+Cell[53512, 2021, 100, 2, 31, "Input"],
+Cell[53615, 2025, 116, 2, 31, "Input"],
+Cell[53734, 2029, 206, 6, 50, "Input"],
+Cell[53943, 2037, 181, 5, 31, "Input"],
+Cell[54127, 2044, 94, 2, 30, "Text"],
+Cell[54224, 2048, 240, 7, 46, "Input"],
+Cell[54467, 2057, 414, 16, 31, "Text"],
+Cell[54884, 2075, 180, 5, 31, "Input"],
+Cell[55067, 2082, 42, 0, 30, "Text"],
+Cell[55112, 2084, 124, 3, 31, "Input"],
+Cell[55239, 2089, 383, 12, 30, "Text"],
+Cell[55625, 2103, 99, 2, 46, "Input"],
+Cell[55727, 2107, 140, 6, 30, "Text"],
+Cell[55870, 2115, 124, 3, 30, "Text"],
+Cell[55997, 2120, 776, 23, 72, "Input"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[56834, 2150, 79, 4, 46, "Section"],
+Cell[56916, 2156, 283, 5, 68, "Text"],
+Cell[CellGroupData[{
+Cell[57224, 2165, 89, 1, 41, "Subsection"],
+Cell[57316, 2168, 393, 6, 87, "Text"],
+Cell[57712, 2176, 391, 10, 49, "Text"],
+Cell[58106, 2188, 1869, 46, 129, "Output"],
+Cell[CellGroupData[{
+Cell[60000, 2238, 54, 1, 31, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[60079, 2243, 810, 29, 56, "Item"],
+Cell[60892, 2274, 423, 14, 29, "ItemParagraph"],
+Cell[61318, 2290, 72, 0, 21, "ItemParagraph"],
+Cell[61393, 2292, 669, 24, 42, "Subitem"],
+Cell[62065, 2318, 184, 4, 45, "Item"],
+Cell[62252, 2324, 323, 11, 41, "Subitem"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62624, 2341, 63, 1, 31, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[62712, 2346, 176, 6, 29, "Item"],
+Cell[62891, 2354, 69, 0, 29, "Item"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
