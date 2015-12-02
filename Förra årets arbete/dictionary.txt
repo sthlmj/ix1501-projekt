@@ -1,0 +1,11 @@
+Exponential fördelning = tid mellan olika händelser.
+Exempel: tiden det tar tills du får nästa telefon samtal.
+iid rvs = 
+
+independent = free from outside control.
+identically = similar in every detail.
+distributed = give a share or a unit to each of a number of recipients. 
+approximation = a value or quantity that is nearly but not exactly correct.
+i.i.d. example: a sequence of fair or loaded dice rolls.
+
+normal approximation = 
