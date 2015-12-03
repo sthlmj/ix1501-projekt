@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    278285,       6661]
-NotebookOptionsPosition[    213651,       5348]
-NotebookOutlinePosition[    265737,       6278]
-CellTagsIndexPosition[    265694,       6275]
+NotebookDataLength[    278386,       6662]
+NotebookOptionsPosition[    213752,       5349]
+NotebookOutlinePosition[    265838,       6279]
+CellTagsIndexPosition[    265795,       6276]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -5162,8 +5162,8 @@ Cell["The Relative Error of Normal Approximation", "Subsection",
 Cell[TextData[{
  "If you consider the average(mean(median)) of 20 iid(oberoende stokastisk \
 variabel) rvs(random variabels), normal distribution(normal \
-f\[ODoubleDot]rdelning) is often considered as a good \
-approximation(approximation to what?). ",
+f\[ODoubleDot]rdelning) is often considered as a good approximation(good \
+approximation to find the normal, useful with standard deviations). ",
  StyleBox["However in this task you will go beyond this recommendation and \
 study under what circumstances it is valid",
   FontWeight->"Bold"],
@@ -5172,7 +5172,8 @@ distribution. How is this effecting the approximation with normal \
 distribution?"
 }], "Text",
  CellChangeTimes->{{3.6581469664438*^9, 3.6581469932294784`*^9}, {
-  3.6581470466718225`*^9, 3.6581470882079754`*^9}}],
+  3.6581470466718225`*^9, 3.6581470882079754`*^9}, {3.6581707030336423`*^9, 
+  3.6581707232816668`*^9}}],
 
 Cell[TextData[{
  "In a certain cellular phone system new calls arrives with exponential \
@@ -6645,19 +6646,19 @@ Cell[207360, 5143, 79, 4, 89, "Section"],
 Cell[207442, 5149, 283, 5, 72, "Text"],
 Cell[CellGroupData[{
 Cell[207750, 5158, 89, 1, 62, "Subsection"],
-Cell[207842, 5161, 683, 13, 100, "Text"],
-Cell[208528, 5176, 391, 10, 44, "Text"],
-Cell[208922, 5188, 1869, 46, 192, "Output"],
+Cell[207842, 5161, 784, 14, 100, "Text"],
+Cell[208629, 5177, 391, 10, 44, "Text"],
+Cell[209023, 5189, 1869, 46, 192, "Output"],
 Cell[CellGroupData[{
-Cell[210816, 5238, 54, 1, 47, "Subsubsection"],
+Cell[210917, 5239, 54, 1, 47, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[210895, 5243, 874, 30, 51, "Item"],
-Cell[211772, 5275, 423, 14, 40, "ItemParagraph"],
-Cell[212198, 5291, 72, 0, 30, "ItemParagraph"],
-Cell[212273, 5293, 669, 24, 34, "Subitem"],
-Cell[212945, 5319, 184, 4, 42, "Item"],
-Cell[213132, 5325, 323, 11, 34, "Subitem"],
-Cell[213458, 5338, 129, 3, 42, "Item"]
+Cell[210996, 5244, 874, 30, 51, "Item"],
+Cell[211873, 5276, 423, 14, 40, "ItemParagraph"],
+Cell[212299, 5292, 72, 0, 30, "ItemParagraph"],
+Cell[212374, 5294, 669, 24, 34, "Subitem"],
+Cell[213046, 5320, 184, 4, 42, "Item"],
+Cell[213233, 5326, 323, 11, 34, "Subitem"],
+Cell[213559, 5339, 129, 3, 42, "Item"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
