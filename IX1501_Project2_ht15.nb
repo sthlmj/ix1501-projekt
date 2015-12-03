@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    276407,       6638]
-NotebookOptionsPosition[    211844,       5326]
-NotebookOutlinePosition[    263927,       6256]
-CellTagsIndexPosition[    263884,       6253]
+NotebookDataLength[    276579,       6644]
+NotebookOptionsPosition[    211976,       5331]
+NotebookOutlinePosition[    264059,       6261]
+CellTagsIndexPosition[    264016,       6258]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -5317,7 +5317,12 @@ interval, e.g ",
     StyleBox["h",
      FontSlant->"Plain"]}], TraditionalForm]]],
  ", if the time between the events is exponential?"
-}], "Subitem"]
+}], "Subitem"],
+
+Cell["\<\
+http://math.stackexchange.com/questions/466927/independent-identically-\
+distributed-iid-random-variables\
+\>", "Item"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -6634,7 +6639,8 @@ Cell[210097, 5258, 423, 14, 40, "ItemParagraph"],
 Cell[210523, 5274, 72, 0, 30, "ItemParagraph"],
 Cell[210598, 5276, 669, 24, 81, "Subitem"],
 Cell[211270, 5302, 184, 4, 66, "Item"],
-Cell[211457, 5308, 323, 11, 58, "Subitem"]
+Cell[211457, 5308, 323, 11, 58, "Subitem"],
+Cell[211783, 5321, 129, 3, 66, "Item"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
