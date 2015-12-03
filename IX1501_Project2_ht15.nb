@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    129532,       3669]
-NotebookOptionsPosition[     67962,       2474]
-NotebookOutlinePosition[    120048,       3404]
-CellTagsIndexPosition[    120005,       3401]
+NotebookDataLength[    130551,       3695]
+NotebookOptionsPosition[     68986,       2500]
+NotebookOutlinePosition[    121072,       3430]
+CellTagsIndexPosition[    121029,       3427]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -359,17 +359,19 @@ Cell[TextData[{
  ".",
  
  CounterBox["Subsection"],
- " Convolution"
-}], "Subsection"],
+ " Convolution(faltning = summan av oberoende stokastisk variabel)"
+}], "Subsection",
+ CellChangeTimes->{{3.6581261086851296`*^9, 3.658126111909452*^9}, {
+  3.658126621434399*^9, 3.658126630963352*^9}}],
 
 Cell[TextData[{
  "I det h\[ADoubleDot]r projekt uppgiften ska vi fokusera p\[ARing] ",
- StyleBox["summan av oberoende stokastisk variable ",
+ StyleBox["summan av oberoende stokastisk variabel ",
   FontWeight->"Bold"],
  "(eller slumpm\[ADoubleDot]ssig variabel). I vissa fall, \[ADoubleDot]r det \
 m\[ODoubleDot]jligt att best\[ADoubleDot]mma korrekt sannolikhet \
-distributionen. I andra fall m\[ARing]ste du f\[ODoubleDot]rlita dig \
-p\[ARing] approximationen. \n\nIn this project task we will focus on a ",
+distribution. I andra fall m\[ARing]ste du f\[ODoubleDot]rlita dig p\[ARing] \
+approximationen. \n\nIn this project task we will focus on a ",
  StyleBox["sum of independent stochastic variables",
   FontWeight->"Bold"],
  " (or random variables, rvs). In some cases, it is possible to determine the \
@@ -377,7 +379,8 @@ correct probability distribution. In other cases you have to rely on \
 approximations."
 }], "Text",
  CellChangeTimes->{{3.658124329969099*^9, 3.658124382586537*^9}, {
-  3.6581244478070583`*^9, 3.658124523272604*^9}}],
+  3.6581244478070583`*^9, 3.658124523272604*^9}, {3.658126166928953*^9, 
+  3.6581261671129713`*^9}, {3.6581262069709573`*^9, 3.6581262079860587`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -693,7 +696,29 @@ Cell[BoxData[
       SubscriptBox["\[GothicX]", "i"]}], "=", "s"}], ")"}]}], 
   TraditionalForm]], "DisplayFormula"],
 
-Cell["A convenient way here is to make a recursive definition:", "Text"],
+Cell[TextData[{
+ "Ett bekv\[ADoubleDot]mt s\[ADoubleDot]tt \[ADoubleDot]r att \
+g\[ODoubleDot]ra en rekursiv definition:\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["pf", "n"], "(", "s", ")"}], "=", 
+    RowBox[{
+     UnderscriptBox["\[Sum]", 
+      RowBox[{"\[ForAll]", "i"}]], 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["pf", "1"], "(", 
+       RowBox[{"s", "-", "i"}], ")"}], 
+      RowBox[{
+       SubscriptBox["pf", 
+        RowBox[{"n", "-", "1"}]], "(", "i", ")"}]}]}]}], TraditionalForm]],
+  UnderscriptBoxOptions->{LimitsPositioning->False}],
+ "\nA convenient way here is to make a recursive definition:"
+}], "Text",
+ CellChangeTimes->{{3.6581252908413534`*^9, 3.6581252947447433`*^9}, {
+  3.658126075056767*^9, 3.6581260896112223`*^9}}],
 
 Cell[BoxData[
  FormBox[
@@ -729,7 +754,7 @@ Cell[TextData[{
 }], "Subsubsection"],
 
 Cell[TextData[{
- "The recurrence above can be programmed (see ",
+ "\nThe recurrence above can be programmed (see ",
  ButtonBox["Functions That Remember Values They Have Found",
   BaseStyle->"Link",
   ButtonData->"paclet:tutorial/FunctionsThatRememberValuesTheyHaveFound"],
@@ -749,7 +774,8 @@ Cell[TextData[{
    BaseStyle->"Link",
    ButtonData->"paclet:ref/ListConvolve"]]],
  "."
-}], "Text"],
+}], "Text",
+ CellChangeTimes->{3.6581264847417316`*^9}],
 
 Cell[TextData[{
  "Notice that when you use discrete distributions in Mathematica the ",
@@ -1206,7 +1232,7 @@ Cell["\<\
 Now, this looks similar to a continuous distribution I\[CloseCurlyQuote]ve \
 seen somewhere.\
 \>", "Text"]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1380,7 +1406,7 @@ Cell[BoxData[
        RowBox[{"n", "-", "1"}]], "(", "t", ")"}], "d", "\[InvisibleSpace]", 
      "t"}]}]}], TraditionalForm]], "DisplayFormula",
  UnderscriptBoxOptions->{LimitsPositioning->False}]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1848,7 +1874,7 @@ Cell["\<\
 Now, the black function looks similar to a distribution I\[CloseCurlyQuote]ve \
 seen somewhere.\
 \>", "Text"]
-}, Closed]]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2274,7 +2300,7 @@ Cell[BoxData[
       RowBox[{"HoldForm", "[", 
        RowBox[{"pdf", "[", "t", "]"}], "]"}]}], "}"}]}]}], "]"}]], "Input"]
 }, Closed]]
-}, Closed]]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3482,190 +3508,190 @@ Cell[9031, 343, 71, 1, 29, "SubitemParagraph"]
 Cell[9117, 347, 128, 3, 44, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9282, 355, 110, 7, 62, "Subsection"],
-Cell[9395, 364, 827, 15, 156, "Text"],
+Cell[9282, 355, 279, 9, 62, "Subsection"],
+Cell[9564, 366, 926, 16, 156, "Text"],
 Cell[CellGroupData[{
-Cell[10247, 383, 282, 12, 47, "Subsubsection"],
-Cell[10532, 397, 2204, 62, 132, "Text"],
-Cell[12739, 461, 634, 21, 40, "DisplayFormula"],
-Cell[13376, 484, 1288, 39, 127, "Text"],
-Cell[14667, 525, 830, 27, 65, "DisplayFormula"],
-Cell[15500, 554, 2000, 59, 180, "Text"],
-Cell[17503, 615, 858, 24, 72, "Text"],
-Cell[18364, 641, 1236, 39, 98, "Text"],
-Cell[19603, 682, 324, 11, 78, "DisplayFormula"],
-Cell[19930, 695, 72, 0, 44, "Text"],
-Cell[20005, 697, 466, 16, 65, "DisplayFormula"]
+Cell[10515, 386, 282, 12, 47, "Subsubsection"],
+Cell[10800, 400, 2204, 62, 132, "Text"],
+Cell[13007, 464, 634, 21, 40, "DisplayFormula"],
+Cell[13644, 487, 1288, 39, 127, "Text"],
+Cell[14935, 528, 830, 27, 65, "DisplayFormula"],
+Cell[15768, 557, 2000, 59, 180, "Text"],
+Cell[17771, 618, 858, 24, 72, "Text"],
+Cell[18632, 644, 1236, 39, 98, "Text"],
+Cell[19871, 685, 324, 11, 78, "DisplayFormula"],
+Cell[20198, 698, 782, 22, 111, "Text"],
+Cell[20983, 722, 466, 16, 65, "DisplayFormula"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20508, 718, 157, 10, 47, "Subsubsection"],
-Cell[20668, 730, 657, 21, 105, "Text"],
-Cell[21328, 753, 429, 11, 105, "Text"],
-Cell[21760, 766, 588, 17, 72, "Program"],
-Cell[22351, 785, 264, 8, 73, "Text"],
-Cell[22618, 795, 57, 1, 45, "Text"],
-Cell[22678, 798, 207, 7, 45, "Text"],
-Cell[22888, 807, 70, 1, 46, "Input"],
-Cell[22961, 810, 608, 17, 108, "Input"],
-Cell[23572, 829, 325, 12, 46, "Text"],
-Cell[23900, 843, 357, 10, 46, "Input"],
-Cell[24260, 855, 56, 0, 45, "Text"],
-Cell[24319, 857, 96, 2, 46, "Input"],
-Cell[24418, 861, 263, 11, 48, "Text"],
-Cell[24684, 874, 372, 10, 46, "Input"],
-Cell[25059, 886, 36, 0, 45, "Text"],
-Cell[25098, 888, 723, 23, 70, "DisplayFormula"],
-Cell[25824, 913, 107, 5, 45, "Text"],
-Cell[25934, 920, 470, 13, 78, "Input"],
-Cell[26407, 935, 310, 11, 48, "Text"],
-Cell[26720, 948, 115, 4, 120, "Program"],
-Cell[26838, 954, 172, 7, 45, "Text"],
-Cell[27013, 963, 198, 4, 46, "Input"],
-Cell[27214, 969, 108, 5, 45, "Text"],
-Cell[27325, 976, 701, 18, 108, "Input"],
-Cell[28029, 996, 57, 1, 45, "Text"],
-Cell[28089, 999, 70, 1, 46, "Input"],
-Cell[28162, 1002, 295, 5, 102, "Text"],
-Cell[28460, 1009, 424, 13, 76, "Text"],
-Cell[28887, 1024, 713, 23, 102, "Input"],
-Cell[29603, 1049, 201, 6, 45, "Text"],
-Cell[29807, 1057, 54, 1, 46, "Input"],
-Cell[29864, 1060, 115, 3, 45, "Text"],
-Cell[29982, 1065, 235, 6, 46, "Input"],
-Cell[30220, 1073, 73, 0, 45, "Text"],
-Cell[30296, 1075, 80, 2, 46, "Input"],
-Cell[30379, 1079, 109, 3, 46, "Input"],
-Cell[30491, 1084, 55, 0, 45, "Text"],
-Cell[30549, 1086, 365, 12, 85, "Input"],
-Cell[30917, 1100, 57, 1, 46, "Input"],
-Cell[30977, 1103, 168, 3, 73, "Text"],
-Cell[31148, 1108, 266, 7, 78, "Input"],
-Cell[31417, 1117, 54, 1, 46, "Input"],
-Cell[31474, 1120, 78, 2, 69, "Input"],
-Cell[31555, 1124, 315, 11, 45, "Text"],
-Cell[31873, 1137, 376, 10, 73, "Text"],
-Cell[32252, 1149, 125, 3, 46, "Input"],
-Cell[32380, 1154, 393, 13, 73, "Text"],
-Cell[32776, 1169, 150, 4, 46, "Input"],
-Cell[32929, 1175, 131, 3, 45, "Text"],
-Cell[33063, 1180, 263, 9, 46, "Input"],
-Cell[33329, 1191, 389, 11, 46, "Input"],
-Cell[33721, 1204, 116, 3, 45, "Text"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[33874, 1212, 165, 10, 36, "Subsubsection"],
-Cell[34042, 1224, 758, 26, 79, "Text"],
-Cell[34803, 1252, 235, 7, 43, "DisplayFormula"],
-Cell[35041, 1261, 283, 8, 69, "Text"],
-Cell[35327, 1271, 796, 24, 84, "DisplayFormula"],
-Cell[36126, 1297, 1003, 34, 121, "Text"],
-Cell[37132, 1333, 529, 18, 76, "Text"],
-Cell[37664, 1353, 325, 10, 73, "Text"],
-Cell[37992, 1365, 508, 16, 84, "DisplayFormula"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[38537, 1386, 159, 10, 36, "Subsubsection"],
-Cell[38699, 1398, 524, 16, 75, "Text"],
-Cell[39226, 1416, 842, 34, 111, "Text"],
-Cell[40071, 1452, 597, 17, 81, "Program"],
-Cell[40671, 1471, 57, 1, 45, "Text"],
-Cell[40731, 1474, 86, 2, 45, "Text"],
-Cell[40820, 1478, 70, 1, 46, "Input"],
-Cell[40893, 1481, 350, 10, 78, "Input"],
-Cell[41246, 1493, 325, 12, 46, "Text"],
-Cell[41574, 1507, 357, 10, 46, "Input"],
-Cell[41934, 1519, 105, 5, 45, "Text"],
-Cell[42042, 1526, 96, 2, 46, "Input"],
-Cell[42141, 1530, 265, 11, 48, "Text"],
-Cell[42409, 1543, 745, 21, 78, "Input"],
-Cell[43157, 1566, 95, 5, 45, "Text"],
-Cell[43255, 1573, 95, 2, 46, "Input"],
-Cell[43353, 1577, 108, 5, 45, "Text"],
-Cell[43464, 1584, 670, 18, 108, "Input"],
-Cell[44137, 1604, 32, 0, 45, "Text"],
-Cell[44172, 1606, 102, 4, 120, "Program"],
-Cell[44277, 1612, 157, 6, 45, "Text"],
-Cell[44437, 1620, 187, 4, 46, "Input"],
-Cell[44627, 1626, 191, 5, 46, "Input"],
-Cell[44821, 1633, 108, 5, 45, "Text"],
-Cell[44932, 1640, 670, 18, 108, "Input"],
-Cell[45605, 1660, 57, 1, 45, "Text"],
-Cell[45665, 1663, 70, 1, 46, "Input"],
-Cell[45738, 1666, 305, 10, 73, "Text"],
-Cell[46046, 1678, 50, 0, 45, "Text"],
-Cell[46099, 1680, 182, 5, 46, "Input"],
-Cell[46284, 1687, 96, 2, 46, "Input"],
-Cell[46383, 1691, 673, 20, 78, "Input"],
-Cell[47059, 1713, 640, 24, 78, "Text"],
-Cell[47702, 1739, 219, 6, 46, "Input"],
-Cell[47924, 1747, 124, 3, 46, "Input"],
-Cell[48051, 1752, 801, 23, 108, "Input"],
-Cell[48855, 1777, 800, 23, 108, "Input"],
-Cell[49658, 1802, 123, 3, 45, "Text"],
-Cell[49784, 1807, 767, 22, 108, "Input"],
-Cell[50554, 1831, 486, 13, 82, "Input"],
-Cell[51043, 1846, 119, 3, 45, "Text"]
-}, Closed]]
+Cell[21486, 743, 157, 10, 47, "Subsubsection"],
+Cell[21646, 755, 703, 22, 101, "Text"],
+Cell[22352, 779, 429, 11, 73, "Text"],
+Cell[22784, 792, 588, 17, 71, "Program"],
+Cell[23375, 811, 264, 8, 44, "Text"],
+Cell[23642, 821, 57, 1, 44, "Text"],
+Cell[23702, 824, 207, 7, 44, "Text"],
+Cell[23912, 833, 70, 1, 45, "Input"],
+Cell[23985, 836, 608, 17, 104, "Input"],
+Cell[24596, 855, 325, 12, 45, "Text"],
+Cell[24924, 869, 357, 10, 45, "Input"],
+Cell[25284, 881, 56, 0, 44, "Text"],
+Cell[25343, 883, 96, 2, 45, "Input"],
+Cell[25442, 887, 263, 11, 44, "Text"],
+Cell[25708, 900, 372, 10, 45, "Input"],
+Cell[26083, 912, 36, 0, 44, "Text"],
+Cell[26122, 914, 723, 23, 62, "DisplayFormula"],
+Cell[26848, 939, 107, 5, 44, "Text"],
+Cell[26958, 946, 470, 13, 45, "Input"],
+Cell[27431, 961, 310, 11, 44, "Text"],
+Cell[27744, 974, 115, 4, 112, "Program"],
+Cell[27862, 980, 172, 7, 44, "Text"],
+Cell[28037, 989, 198, 4, 45, "Input"],
+Cell[28238, 995, 108, 5, 44, "Text"],
+Cell[28349, 1002, 701, 18, 75, "Input"],
+Cell[29053, 1022, 57, 1, 44, "Text"],
+Cell[29113, 1025, 70, 1, 45, "Input"],
+Cell[29186, 1028, 295, 5, 72, "Text"],
+Cell[29484, 1035, 424, 13, 45, "Text"],
+Cell[29911, 1050, 713, 23, 96, "Input"],
+Cell[30627, 1075, 201, 6, 44, "Text"],
+Cell[30831, 1083, 54, 1, 45, "Input"],
+Cell[30888, 1086, 115, 3, 44, "Text"],
+Cell[31006, 1091, 235, 6, 45, "Input"],
+Cell[31244, 1099, 73, 0, 44, "Text"],
+Cell[31320, 1101, 80, 2, 45, "Input"],
+Cell[31403, 1105, 109, 3, 45, "Input"],
+Cell[31515, 1110, 55, 0, 44, "Text"],
+Cell[31573, 1112, 365, 12, 85, "Input"],
+Cell[31941, 1126, 57, 1, 45, "Input"],
+Cell[32001, 1129, 168, 3, 44, "Text"],
+Cell[32172, 1134, 266, 7, 75, "Input"],
+Cell[32441, 1143, 54, 1, 45, "Input"],
+Cell[32498, 1146, 78, 2, 65, "Input"],
+Cell[32579, 1150, 315, 11, 44, "Text"],
+Cell[32897, 1163, 376, 10, 72, "Text"],
+Cell[33276, 1175, 125, 3, 45, "Input"],
+Cell[33404, 1180, 393, 13, 44, "Text"],
+Cell[33800, 1195, 150, 4, 45, "Input"],
+Cell[33953, 1201, 131, 3, 44, "Text"],
+Cell[34087, 1206, 263, 9, 45, "Input"],
+Cell[34353, 1217, 389, 11, 45, "Input"],
+Cell[34745, 1230, 116, 3, 44, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[51211, 1855, 118, 7, 62, "Subsection"],
-Cell[CellGroupData[{
-Cell[51354, 1866, 146, 10, 46, "Subsubsection"],
-Cell[51503, 1878, 384, 12, 73, "Text"],
-Cell[51890, 1892, 843, 27, 82, "DisplayFormula"],
-Cell[52736, 1921, 141, 6, 45, "Text"],
-Cell[52880, 1929, 1043, 35, 82, "DisplayFormula"],
-Cell[53926, 1966, 621, 21, 45, "Text"],
-Cell[54550, 1989, 484, 15, 97, "DisplayFormula"],
-Cell[55037, 2006, 531, 17, 97, "DisplayFormula"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[55605, 2028, 147, 10, 37, "Subsubsection"],
-Cell[55755, 2040, 595, 17, 102, "Text"],
-Cell[56353, 2059, 63, 0, 45, "Text"],
-Cell[56419, 2061, 255, 9, 66, "DisplayFormula"],
-Cell[56677, 2072, 369, 12, 70, "DisplayFormula"],
-Cell[57049, 2086, 681, 24, 90, "DisplayFormula"],
-Cell[57733, 2112, 570, 18, 75, "DisplayFormula"],
-Cell[58306, 2132, 145, 6, 45, "Text"],
-Cell[58454, 2140, 56, 0, 45, "Text"],
-Cell[58513, 2142, 70, 1, 46, "Input"],
-Cell[58586, 2145, 182, 5, 46, "Input"],
-Cell[58771, 2152, 100, 2, 46, "Input"],
-Cell[58874, 2156, 116, 2, 46, "Input"],
-Cell[58993, 2160, 206, 6, 75, "Input"],
-Cell[59202, 2168, 181, 5, 46, "Input"],
-Cell[59386, 2175, 94, 2, 45, "Text"],
-Cell[59483, 2179, 240, 7, 69, "Input"],
-Cell[59726, 2188, 414, 16, 46, "Text"],
-Cell[60143, 2206, 180, 5, 46, "Input"],
-Cell[60326, 2213, 42, 0, 45, "Text"],
-Cell[60371, 2215, 124, 3, 46, "Input"],
-Cell[60498, 2220, 383, 12, 45, "Text"],
-Cell[60884, 2234, 99, 2, 69, "Input"],
-Cell[60986, 2238, 140, 6, 45, "Text"],
-Cell[61129, 2246, 124, 3, 45, "Text"],
-Cell[61256, 2251, 776, 23, 108, "Input"]
-}, Closed]]
-}, Closed]]
+Cell[34898, 1238, 165, 10, 47, "Subsubsection"],
+Cell[35066, 1250, 758, 26, 44, "Text"],
+Cell[35827, 1278, 235, 7, 40, "DisplayFormula"],
+Cell[36065, 1287, 283, 8, 44, "Text"],
+Cell[36351, 1297, 796, 24, 79, "DisplayFormula"],
+Cell[37150, 1323, 1003, 34, 85, "Text"],
+Cell[38156, 1359, 529, 18, 44, "Text"],
+Cell[38688, 1379, 325, 10, 44, "Text"],
+Cell[39016, 1391, 508, 16, 79, "DisplayFormula"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[62093, 2281, 79, 4, 89, "Section"],
-Cell[62175, 2287, 283, 5, 72, "Text"],
+Cell[39561, 1412, 159, 10, 47, "Subsubsection"],
+Cell[39723, 1424, 524, 16, 45, "Text"],
+Cell[40250, 1442, 842, 34, 76, "Text"],
+Cell[41095, 1478, 597, 17, 76, "Program"],
+Cell[41695, 1497, 57, 1, 44, "Text"],
+Cell[41755, 1500, 86, 2, 44, "Text"],
+Cell[41844, 1504, 70, 1, 45, "Input"],
+Cell[41917, 1507, 350, 10, 75, "Input"],
+Cell[42270, 1519, 325, 12, 45, "Text"],
+Cell[42598, 1533, 357, 10, 45, "Input"],
+Cell[42958, 1545, 105, 5, 44, "Text"],
+Cell[43066, 1552, 96, 2, 45, "Input"],
+Cell[43165, 1556, 265, 11, 44, "Text"],
+Cell[43433, 1569, 745, 21, 45, "Input"],
+Cell[44181, 1592, 95, 5, 44, "Text"],
+Cell[44279, 1599, 95, 2, 45, "Input"],
+Cell[44377, 1603, 108, 5, 44, "Text"],
+Cell[44488, 1610, 670, 18, 75, "Input"],
+Cell[45161, 1630, 32, 0, 44, "Text"],
+Cell[45196, 1632, 102, 4, 112, "Program"],
+Cell[45301, 1638, 157, 6, 44, "Text"],
+Cell[45461, 1646, 187, 4, 45, "Input"],
+Cell[45651, 1652, 191, 5, 45, "Input"],
+Cell[45845, 1659, 108, 5, 44, "Text"],
+Cell[45956, 1666, 670, 18, 75, "Input"],
+Cell[46629, 1686, 57, 1, 44, "Text"],
+Cell[46689, 1689, 70, 1, 45, "Input"],
+Cell[46762, 1692, 305, 10, 44, "Text"],
+Cell[47070, 1704, 50, 0, 44, "Text"],
+Cell[47123, 1706, 182, 5, 45, "Input"],
+Cell[47308, 1713, 96, 2, 45, "Input"],
+Cell[47407, 1717, 673, 20, 45, "Input"],
+Cell[48083, 1739, 640, 24, 46, "Text"],
+Cell[48726, 1765, 219, 6, 45, "Input"],
+Cell[48948, 1773, 124, 3, 45, "Input"],
+Cell[49075, 1778, 801, 23, 75, "Input"],
+Cell[49879, 1803, 800, 23, 75, "Input"],
+Cell[50682, 1828, 123, 3, 44, "Text"],
+Cell[50808, 1833, 767, 22, 45, "Input"],
+Cell[51578, 1857, 486, 13, 48, "Input"],
+Cell[52067, 1872, 119, 3, 44, "Text"]
+}, Open  ]]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[62483, 2296, 89, 1, 62, "Subsection"],
-Cell[62575, 2299, 393, 6, 72, "Text"],
-Cell[62971, 2307, 391, 10, 44, "Text"],
-Cell[63365, 2319, 1869, 46, 192, "Output"],
+Cell[52235, 1881, 118, 7, 62, "Subsection"],
 Cell[CellGroupData[{
-Cell[65259, 2369, 54, 1, 47, "Subsubsection"],
+Cell[52378, 1892, 146, 10, 47, "Subsubsection"],
+Cell[52527, 1904, 384, 12, 73, "Text"],
+Cell[52914, 1918, 843, 27, 82, "DisplayFormula"],
+Cell[53760, 1947, 141, 6, 45, "Text"],
+Cell[53904, 1955, 1043, 35, 82, "DisplayFormula"],
+Cell[54950, 1992, 621, 21, 45, "Text"],
+Cell[55574, 2015, 484, 15, 97, "DisplayFormula"],
+Cell[56061, 2032, 531, 17, 97, "DisplayFormula"]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[65338, 2374, 874, 30, 51, "Item"],
-Cell[66215, 2406, 423, 14, 43, "ItemParagraph"],
-Cell[66641, 2422, 72, 0, 31, "ItemParagraph"],
-Cell[66716, 2424, 669, 24, 37, "Subitem"],
-Cell[67388, 2450, 184, 4, 43, "Item"],
-Cell[67575, 2456, 323, 11, 37, "Subitem"]
+Cell[56629, 2054, 147, 10, 36, "Subsubsection"],
+Cell[56779, 2066, 595, 17, 102, "Text"],
+Cell[57377, 2085, 63, 0, 45, "Text"],
+Cell[57443, 2087, 255, 9, 66, "DisplayFormula"],
+Cell[57701, 2098, 369, 12, 70, "DisplayFormula"],
+Cell[58073, 2112, 681, 24, 90, "DisplayFormula"],
+Cell[58757, 2138, 570, 18, 75, "DisplayFormula"],
+Cell[59330, 2158, 145, 6, 45, "Text"],
+Cell[59478, 2166, 56, 0, 45, "Text"],
+Cell[59537, 2168, 70, 1, 46, "Input"],
+Cell[59610, 2171, 182, 5, 46, "Input"],
+Cell[59795, 2178, 100, 2, 46, "Input"],
+Cell[59898, 2182, 116, 2, 46, "Input"],
+Cell[60017, 2186, 206, 6, 75, "Input"],
+Cell[60226, 2194, 181, 5, 46, "Input"],
+Cell[60410, 2201, 94, 2, 45, "Text"],
+Cell[60507, 2205, 240, 7, 69, "Input"],
+Cell[60750, 2214, 414, 16, 46, "Text"],
+Cell[61167, 2232, 180, 5, 46, "Input"],
+Cell[61350, 2239, 42, 0, 45, "Text"],
+Cell[61395, 2241, 124, 3, 46, "Input"],
+Cell[61522, 2246, 383, 12, 45, "Text"],
+Cell[61908, 2260, 99, 2, 69, "Input"],
+Cell[62010, 2264, 140, 6, 45, "Text"],
+Cell[62153, 2272, 124, 3, 45, "Text"],
+Cell[62280, 2277, 776, 23, 108, "Input"]
+}, Closed]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[63117, 2307, 79, 4, 89, "Section"],
+Cell[63199, 2313, 283, 5, 72, "Text"],
+Cell[CellGroupData[{
+Cell[63507, 2322, 89, 1, 62, "Subsection"],
+Cell[63599, 2325, 393, 6, 72, "Text"],
+Cell[63995, 2333, 391, 10, 44, "Text"],
+Cell[64389, 2345, 1869, 46, 192, "Output"],
+Cell[CellGroupData[{
+Cell[66283, 2395, 54, 1, 47, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[66362, 2400, 874, 30, 51, "Item"],
+Cell[67239, 2432, 423, 14, 40, "ItemParagraph"],
+Cell[67665, 2448, 72, 0, 30, "ItemParagraph"],
+Cell[67740, 2450, 669, 24, 34, "Subitem"],
+Cell[68412, 2476, 184, 4, 42, "Item"],
+Cell[68599, 2482, 323, 11, 34, "Subitem"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
