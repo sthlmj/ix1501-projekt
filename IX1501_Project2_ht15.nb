@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    276409,       6638]
+NotebookDataLength[    276407,       6638]
 NotebookOptionsPosition[    211844,       5326]
-NotebookOutlinePosition[    263930,       6256]
-CellTagsIndexPosition[    263887,       6253]
+NotebookOutlinePosition[    263927,       6256]
+CellTagsIndexPosition[    263884,       6253]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -5324,8 +5324,8 @@ interval, e.g ",
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1920, 998},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{944, 982},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 DockedCells->Cell[
   BoxData[
    GridBox[{{
@@ -6620,21 +6620,21 @@ Cell[174326, 4582, 31286, 536, 70, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[205685, 5126, 79, 4, 89, "Section"],
-Cell[205767, 5132, 283, 5, 72, "Text"],
+Cell[205767, 5132, 283, 5, 99, "Text"],
 Cell[CellGroupData[{
 Cell[206075, 5141, 89, 1, 62, "Subsection"],
-Cell[206167, 5144, 683, 13, 100, "Text"],
-Cell[206853, 5159, 391, 10, 44, "Text"],
+Cell[206167, 5144, 683, 13, 184, "Text"],
+Cell[206853, 5159, 391, 10, 99, "Text"],
 Cell[207247, 5171, 1869, 46, 192, "Output"],
 Cell[CellGroupData[{
 Cell[209141, 5221, 54, 1, 47, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[209220, 5226, 874, 30, 51, "Item"],
+Cell[209220, 5226, 874, 30, 100, "Item"],
 Cell[210097, 5258, 423, 14, 40, "ItemParagraph"],
 Cell[210523, 5274, 72, 0, 30, "ItemParagraph"],
-Cell[210598, 5276, 669, 24, 34, "Subitem"],
-Cell[211270, 5302, 184, 4, 42, "Item"],
-Cell[211457, 5308, 323, 11, 34, "Subitem"]
+Cell[210598, 5276, 669, 24, 81, "Subitem"],
+Cell[211270, 5302, 184, 4, 66, "Item"],
+Cell[211457, 5308, 323, 11, 58, "Subitem"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
