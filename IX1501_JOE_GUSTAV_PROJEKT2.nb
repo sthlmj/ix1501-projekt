@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    116275,       2236]
-NotebookOptionsPosition[    114007,       2164]
-NotebookOutlinePosition[    114427,       2180]
-CellTagsIndexPosition[    114384,       2177]
+NotebookDataLength[    117068,       2253]
+NotebookOptionsPosition[    114727,       2178]
+NotebookOutlinePosition[    115147,       2194]
+CellTagsIndexPosition[    115104,       2191]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -86,7 +86,8 @@ Cell[BoxData[{
    RowBox[{"Exakta", " ", "f\[ODoubleDot]rdelningen"}], 
    "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"\[Lambda]", " ", "=", " ", "3"}], ";", " ", 
+  RowBox[{"\[Lambda]", " ", "=", " ", 
+   RowBox[{"1", "/", "3"}]}], ";", " ", 
   RowBox[{"(*", 
    RowBox[{"f\[ODoubleDot]rv\[ADoubleDot]ntade", " ", "tidsintervall"}], 
    "*)"}], "\[IndentingNewLine]", 
@@ -342,11 +343,14 @@ Cell[BoxData[{
       RowBox[{"HoldForm", "[", 
        RowBox[{"relativeError", "[", "t", "]"}], "]"}]}], "}"}]}]}], 
   "]"}], "\[IndentingNewLine]"}], "Input",
- CellChangeTimes->{{3.658140802268059*^9, 3.6581408791517467`*^9}}],
+ CellChangeTimes->{{3.658140802268059*^9, 3.6581408791517467`*^9}, {
+  3.658144481811362*^9, 3.6581444831284933`*^9}, {3.658144602795459*^9, 
+  3.658144686753854*^9}}],
 
 Cell[BoxData["60"], "Output",
  CellChangeTimes->{{3.6581408213959713`*^9, 3.658140837665598*^9}, 
-   3.658140880749906*^9}],
+   3.658140880749906*^9, 3.658144493812562*^9, 3.6581446082920084`*^9, {
+   3.6581446449346724`*^9, 3.658144662031382*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{{}, {}, 
@@ -970,7 +974,8 @@ s0MCdfmieZWX5uh/jBDykw==
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{{3.6581408213959713`*^9, 3.658140837665598*^9}, 
-   3.658140880858917*^9}],
+   3.658140880749906*^9, 3.658144493812562*^9, 3.6581446082920084`*^9, {
+   3.6581446449346724`*^9, 3.6581446621373925`*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{{}, {}, 
@@ -1509,7 +1514,8 @@ qp1/7ltEeCYw2OG176OVwRYZf4lg4eAiXrDv7YrV/M+7RHhltqjxY98vyn03
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{{3.6581408213959713`*^9, 3.658140837665598*^9}, 
-   3.6581408809269238`*^9}],
+   3.658140880749906*^9, 3.658144493812562*^9, 3.6581446082920084`*^9, {
+   3.6581446449346724`*^9, 3.6581446622104*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{{}, {}, 
@@ -1821,7 +1827,8 @@ WUz2w3pfk1/I/ULrb7QKHnXywyIL/vx1WUTe53WPT9sPO5ofYPjoN3LXiWaP
      Scaled[0.02]}, {0, 0}},
   Ticks->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{{3.6581408213959713`*^9, 3.658140837665598*^9}, 
-   3.6581408810189333`*^9}],
+   3.658140880749906*^9, 3.658144493812562*^9, 3.6581446082920084`*^9, {
+   3.6581446449346724`*^9, 3.658144662301409*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{{}, {}, 
@@ -2055,11 +2062,18 @@ Ridt539x0hvuib3Xnf/FNWR6jjSM/hev5PySfFXV5V9chD6gVnXZ5V989VOc
      Scaled[0.02]}, {0, 0}},
   Ticks->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{{3.6581408213959713`*^9, 3.658140837665598*^9}, 
-   3.658140881116943*^9}]
+   3.658140880749906*^9, 3.658144493812562*^9, 3.6581446082920084`*^9, {
+   3.6581446449346724`*^9, 3.658144662390418*^9}}]
 }, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData["wi"], "Input",
  CellChangeTimes->{{3.658141054313261*^9, 3.658141054646294*^9}}],
+
+Cell[BoxData["wi"], "Output",
+ CellChangeTimes->{3.6581446087100506`*^9}]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -2162,8 +2176,8 @@ DLLEXPORT int fun(WolframLibraryData libData, mreal A1, mreal *Res)
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{775, 873},
-WindowMargins->{{Automatic, 431}, {Automatic, 42}},
+WindowSize->{1920, 998},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
 StyleDefinitions->FrontEnd`FileName[{"Report"}, "StandardReport.nb", 
   CharacterEncoding -> "WindowsANSI"]
@@ -2193,47 +2207,50 @@ Cell[CellGroupData[{
 Cell[1526, 53, 500, 18, 39, "Subsubsection"],
 Cell[2029, 73, 111, 3, 30, "Text"],
 Cell[CellGroupData[{
-Cell[2165, 80, 9427, 264, 1246, "Input"],
-Cell[11595, 346, 123, 2, 40, "Output"],
-Cell[11721, 350, 36888, 622, 269, "Output"],
-Cell[48612, 974, 31712, 537, 272, "Output"],
-Cell[80327, 1513, 18082, 310, 261, "Output"],
-Cell[98412, 1825, 13293, 232, 271, "Output"]
+Cell[2165, 80, 9551, 267, 918, "Input"],
+Cell[11719, 349, 221, 3, 40, "Output"],
+Cell[11943, 354, 36988, 623, 269, "Output"],
+Cell[48934, 979, 31806, 538, 272, "Output"],
+Cell[80743, 1519, 18178, 311, 261, "Output"],
+Cell[98924, 1832, 13391, 233, 271, "Output"]
 }, Open  ]],
-Cell[111720, 2060, 94, 1, 40, "Input"],
 Cell[CellGroupData[{
-Cell[111839, 2065, 46, 0, 25, "Item"],
-Cell[111888, 2067, 56, 0, 21, "ItemParagraph"],
-Cell[CellGroupData[{
-Cell[111969, 2071, 43, 0, 25, "Subitem"],
-Cell[112015, 2073, 59, 0, 21, "SubitemParagraph"],
-Cell[CellGroupData[{
-Cell[112099, 2077, 46, 0, 25, "Subsubitem"],
-Cell[112148, 2079, 62, 0, 21, "SubsubitemParagraph"]
-}, Open  ]]
-}, Open  ]]
+Cell[112352, 2070, 94, 1, 40, "Input"],
+Cell[112449, 2073, 73, 1, 40, "Output"]
 }, Open  ]],
-Cell[112249, 2084, 92, 2, 30, "Text"],
-Cell[112344, 2088, 185, 6, 44, "DisplayFormula"],
-Cell[112532, 2096, 163, 6, 30, "Text"],
 Cell[CellGroupData[{
-Cell[112720, 2106, 54, 0, 26, "ItemNumbered"],
-Cell[112777, 2108, 56, 0, 21, "ItemParagraph"],
+Cell[112559, 2079, 46, 0, 25, "Item"],
+Cell[112608, 2081, 56, 0, 21, "ItemParagraph"],
 Cell[CellGroupData[{
-Cell[112858, 2112, 60, 0, 24, "SubitemNumbered"],
-Cell[112921, 2114, 59, 0, 21, "SubitemParagraph"],
+Cell[112689, 2085, 43, 0, 25, "Subitem"],
+Cell[112735, 2087, 59, 0, 21, "SubitemParagraph"],
 Cell[CellGroupData[{
-Cell[113005, 2118, 54, 0, 24, "SubsubitemNumbered"],
-Cell[113062, 2120, 62, 0, 21, "SubsubitemParagraph"]
+Cell[112819, 2091, 46, 0, 25, "Subsubitem"],
+Cell[112868, 2093, 62, 0, 21, "SubsubitemParagraph"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
-Cell[113163, 2125, 101, 2, 30, "Text"],
-Cell[113267, 2129, 193, 6, 44, "DisplayFormulaNumbered"],
-Cell[113463, 2137, 75, 0, 30, "Text"],
-Cell[113541, 2139, 80, 2, 47, "Code"],
-Cell[113624, 2143, 87, 2, 30, "Text"],
-Cell[113714, 2147, 241, 11, 184, "Program"]
+Cell[112969, 2098, 92, 2, 30, "Text"],
+Cell[113064, 2102, 185, 6, 44, "DisplayFormula"],
+Cell[113252, 2110, 163, 6, 30, "Text"],
+Cell[CellGroupData[{
+Cell[113440, 2120, 54, 0, 26, "ItemNumbered"],
+Cell[113497, 2122, 56, 0, 21, "ItemParagraph"],
+Cell[CellGroupData[{
+Cell[113578, 2126, 60, 0, 24, "SubitemNumbered"],
+Cell[113641, 2128, 59, 0, 21, "SubitemParagraph"],
+Cell[CellGroupData[{
+Cell[113725, 2132, 54, 0, 24, "SubsubitemNumbered"],
+Cell[113782, 2134, 62, 0, 21, "SubsubitemParagraph"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[113883, 2139, 101, 2, 30, "Text"],
+Cell[113987, 2143, 193, 6, 44, "DisplayFormulaNumbered"],
+Cell[114183, 2151, 75, 0, 30, "Text"],
+Cell[114261, 2153, 80, 2, 47, "Code"],
+Cell[114344, 2157, 87, 2, 30, "Text"],
+Cell[114434, 2161, 241, 11, 184, "Program"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
