@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    278386,       6662]
-NotebookOptionsPosition[    213752,       5349]
-NotebookOutlinePosition[    265838,       6279]
-CellTagsIndexPosition[    265795,       6276]
+NotebookDataLength[    278676,       6669]
+NotebookOptionsPosition[    214002,       5355]
+NotebookOutlinePosition[    266088,       6285]
+CellTagsIndexPosition[    266045,       6282]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -5167,9 +5167,11 @@ approximation to find the normal, useful with standard deviations). ",
  StyleBox["However in this task you will go beyond this recommendation and \
 study under what circumstances it is valid",
   FontWeight->"Bold"],
- ". The exponential distribution is very skew compared to the uniform \
-distribution. How is this effecting the approximation with normal \
-distribution?"
+ ". The ",
+ StyleBox["exponential distribution",
+  FontWeight->"Bold"],
+ " is very skew compared to the uniform distribution. How is this effecting \
+the approximation with normal distribution?"
 }], "Text",
  CellChangeTimes->{{3.6581469664438*^9, 3.6581469932294784`*^9}, {
   3.6581470466718225`*^9, 3.6581470882079754`*^9}, {3.6581707030336423`*^9, 
@@ -5340,7 +5342,11 @@ interval, e.g ",
 Cell["\<\
 http://math.stackexchange.com/questions/466927/independent-identically-\
 distributed-iid-random-variables\
-\>", "Item"]
+\>", "Item",
+ CellChangeTimes->{{3.6581708297663145`*^9, 3.658170829769315*^9}}],
+
+Cell["http://www.malinc.se/math/statistics/normal_distrsv.php", "Item",
+ CellChangeTimes->{{3.6581708297663145`*^9, 3.658170830273365*^9}}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -6646,19 +6652,20 @@ Cell[207360, 5143, 79, 4, 89, "Section"],
 Cell[207442, 5149, 283, 5, 72, "Text"],
 Cell[CellGroupData[{
 Cell[207750, 5158, 89, 1, 62, "Subsection"],
-Cell[207842, 5161, 784, 14, 100, "Text"],
-Cell[208629, 5177, 391, 10, 44, "Text"],
-Cell[209023, 5189, 1869, 46, 192, "Output"],
+Cell[207842, 5161, 824, 16, 101, "Text"],
+Cell[208669, 5179, 391, 10, 44, "Text"],
+Cell[209063, 5191, 1869, 46, 192, "Output"],
 Cell[CellGroupData[{
-Cell[210917, 5239, 54, 1, 47, "Subsubsection"],
+Cell[210957, 5241, 54, 1, 47, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[210996, 5244, 874, 30, 51, "Item"],
-Cell[211873, 5276, 423, 14, 40, "ItemParagraph"],
-Cell[212299, 5292, 72, 0, 30, "ItemParagraph"],
-Cell[212374, 5294, 669, 24, 34, "Subitem"],
-Cell[213046, 5320, 184, 4, 42, "Item"],
-Cell[213233, 5326, 323, 11, 34, "Subitem"],
-Cell[213559, 5339, 129, 3, 42, "Item"]
+Cell[211036, 5246, 874, 30, 51, "Item"],
+Cell[211913, 5278, 423, 14, 40, "ItemParagraph"],
+Cell[212339, 5294, 72, 0, 30, "ItemParagraph"],
+Cell[212414, 5296, 669, 24, 34, "Subitem"],
+Cell[213086, 5322, 184, 4, 42, "Item"],
+Cell[213273, 5328, 323, 11, 34, "Subitem"],
+Cell[213599, 5341, 197, 4, 42, "Item"],
+Cell[213799, 5347, 139, 1, 42, "Item"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
