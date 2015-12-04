@@ -1,0 +1,258 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7739,        249]
+NotebookOptionsPosition[      7425,        234]
+NotebookOutlinePosition[      7766,        249]
+CellTagsIndexPosition[      7723,        246]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"u1", ".", " ", "Study"}], " ", "the", " ", "average", " ", 
+    FormBox[
+     RowBox[{
+      OverscriptBox["t", "_"], "=", 
+      RowBox[{
+       RowBox[{
+        FractionBox["1", "n"], " ", 
+        RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{"k", "=", "1"}], "n"], 
+         RowBox[{
+          SubscriptBox["t", "k"], "of", " ", "n"}]}]}], " ", "=", " ", 
+       RowBox[{"20", " ", "interarrival", " ", "times"}]}]}],
+     TraditionalForm]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"u2", ".", " ", "Plotta"}], " ", "absolute", " ", "error", " ", 
+     "of", " ", "the", " ", 
+     SubscriptBox["pdf", 
+      OverscriptBox["t", "_"]], 
+     RowBox[{"(", "t", ")"}], " ", "med", " ", "normal", " ", 
+     RowBox[{"approximationen", ".", " ", "Plotta"}], " ", "\[ADoubleDot]ven",
+      " ", "relative", " ", "error", " ", "P", 
+     RowBox[{"(", 
+      RowBox[{
+       OverscriptBox["t", "_"], ">", "x"}], ")"}]}], ",", " ", 
+    RowBox[{
+     RowBox[{"\[Mu]", "-", 
+      RowBox[{"2", 
+       RowBox[{"\[Sigma]", "/", 
+        SqrtBox["n"]}]}]}], "<", "x", "<", 
+     RowBox[{"\[Mu]", "+", 
+      RowBox[{"2", 
+       RowBox[{"\[Sigma]", "/", 
+        SqrtBox["n"]}]}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"u3", ".", " ", "Plotta"}], " ", "absolute", " ", "error", " ", 
+    "of", " ", "the", " ", 
+    SubscriptBox["cdf", 
+     OverscriptBox["t", "_"]], 
+    RowBox[{"(", "t", ")"}], " ", "med", " ", "normal", " ", 
+    RowBox[{"approximationen", "."}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"u4", ".", " ", "Plotta"}], " ", "\[ADoubleDot]ven", " ", 
+     "relative", " ", "error", " ", "P", 
+     RowBox[{"(", 
+      RowBox[{
+       OverscriptBox["t", "_"], ">", "x"}], ")"}]}], ",", " ", 
+    RowBox[{
+     RowBox[{"\[Mu]", "-", 
+      RowBox[{"2", 
+       RowBox[{"\[Sigma]", "/", 
+        SqrtBox["n"]}]}]}], "<", "x", "<", 
+     RowBox[{"\[Mu]", "+", 
+      RowBox[{"2", 
+       RowBox[{"\[Sigma]", "/", 
+        SqrtBox["n"]}]}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"If", " ", "you", " ", "consider", " ", "the", " ", "average", 
+    RowBox[{"(", 
+     RowBox[{"mean", 
+      RowBox[{"(", "median", ")"}]}], ")"}], " ", "of", " ", "20", " ", "iid", 
+    RowBox[{"(", 
+     RowBox[{"oberoende", " ", "stokastisk", " ", "variabel"}], ")"}], " ", 
+    "rvs", 
+    RowBox[{"(", 
+     RowBox[{"random", " ", "variabels"}], ")"}]}], ",", 
+   RowBox[{"normal", " ", "distribution", 
+    RowBox[{"(", 
+     RowBox[{"normal", " ", "f\[ODoubleDot]rdelning"}], ")"}], " ", "is", " ",
+     "often", " ", "considered", " ", "as", " ", "a", " ", "good", " ", 
+    "approximation", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+       "good", " ", "approximation", " ", "to", " ", "find", " ", "the", " ", 
+        "normal"}], ",", 
+       RowBox[{"useful", " ", "with", " ", "standard", " ", "deviations"}]}], 
+      ")"}], ".", " ", 
+     StyleBox["However",
+      FontWeight->"Bold"]}], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["in",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["this",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["task",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["you",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["will",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["go",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["beyond",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["this",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["recommendation",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["and",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["study",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["under",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["what",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["circumstances",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["it",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["is",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    RowBox[{
+     StyleBox["valid",
+      FontWeight->"Bold"], ".", "The"}], " ", 
+    StyleBox["exponential",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], 
+    StyleBox["distribution",
+     FontWeight->"Bold"], 
+    StyleBox[" ",
+     FontWeight->"Bold"], "is", " ", "very", " ", "skew", " ", "compared", 
+    " ", "to", " ", "the", " ", "uniform", " ", 
+    RowBox[{"distribution", ".", " ", "How"}], " ", "is", " ", "this", " ", 
+    "effecting", " ", "the", " ", "approximation", " ", "with", " ", "normal",
+     " ", 
+    RowBox[{
+    "distribution", "?", "\[IndentingNewLine]", "\[IndentingNewLine]", "In"}],
+     " ", "a", " ", "certain", " ", "cellular", " ", "phone", " ", "system", 
+    " ", "new", " ", "calls", " ", "arrives", " ", "with", " ", "exponential",
+     " ", "distributed", " ", "interarrival", " ", "times", " ", "with", " ", 
+    "expectation", " ", "value", 
+    FormBox[
+     RowBox[{"\[Mu]", "=", 
+      RowBox[{
+       SuperscriptBox["\[Lambda]", 
+        RowBox[{"-", "1"}]], "=", "3"}]}],
+     TraditionalForm], 
+    RowBox[{"minutes", ".", " ", "The"}], " ", "interarrivaltime", " ", "is", 
+    " ", "the", " ", "time", " ", "between", " ", "two", " ", "incoming", " ", 
+    RowBox[{"calls", ".", 
+     RowBox[{"(*", 
+      RowBox[{"To", " ", "calculate", " ", 
+       StyleBox[
+        RowBox[{"the", 
+         StyleBox["expected",
+          FontWeight->"Bold"]}]], 
+       StyleBox[" ",
+        FontWeight->"Bold"], 
+       RowBox[{
+        StyleBox["value",
+         FontWeight->"Bold"], ":", 
+        RowBox[{
+        "1.", " ", "Multiply", " ", "each", " ", "value", " ", "by", " ", 
+         "its", " ", 
+         RowBox[{"probability", ".", "2."}], " ", "Sum", " ", "them", " ", 
+         RowBox[{"up", "."}]}]}]}], "*)"}]}]}]}]}]], "Text",
+ CellChangeTimes->{{3.658229307864522*^9, 3.658229380790522*^9}, {
+  3.658229424201522*^9, 3.6582294418165216`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "\"\<`*\>\"", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Mu]", "=", "3"}], ";"}]], "Input",
+ CellChangeTimes->{{3.658230159454522*^9, 3.658230161734522*^9}}]
+},
+WindowSize->{1904, 998},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6650, 204, 264, "Text"],
+Cell[7211, 226, 70, 1, 31, "Input"],
+Cell[7284, 229, 137, 3, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
