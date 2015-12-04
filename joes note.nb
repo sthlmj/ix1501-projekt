@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7739,        249]
-NotebookOptionsPosition[      7425,        234]
-NotebookOutlinePosition[      7766,        249]
-CellTagsIndexPosition[      7723,        246]
+NotebookDataLength[      8239,        271]
+NotebookOptionsPosition[      7745,        249]
+NotebookOutlinePosition[      8086,        264]
+CellTagsIndexPosition[      8043,        261]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -227,12 +227,27 @@ Cell[BoxData[
 Cell[BoxData[
  RowBox[{"ClearAll", "[", "\"\<`*\>\"", "]"}]], "Input"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
- RowBox[{
-  RowBox[{"\[Mu]", "=", "3"}], ";"}]], "Input",
- CellChangeTimes->{{3.658230159454522*^9, 3.658230161734522*^9}}]
+ RowBox[{"\[Mu]", "=", "3"}]], "Input",
+ CellChangeTimes->{{3.658230159454522*^9, 3.658230167910522*^9}}],
+
+Cell[BoxData["3"], "Output",
+ CellChangeTimes->{3.658230171576522*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"rvs", "=", "20"}]], "Input",
+ CellChangeTimes->{{3.6582302049675217`*^9, 3.658230207308522*^9}}],
+
+Cell[BoxData["20"], "Output",
+ CellChangeTimes->{3.658230208027522*^9}]
+}, Open  ]]
 },
-WindowSize->{1904, 998},
+WindowSize->{1904, 982},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 29, 2015)",
 StyleDefinitions->"Default.nb"
@@ -250,7 +265,14 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 6650, 204, 264, "Text"],
 Cell[7211, 226, 70, 1, 31, "Input"],
-Cell[7284, 229, 137, 3, 31, "Input"]
+Cell[CellGroupData[{
+Cell[7306, 231, 119, 2, 31, "Input"],
+Cell[7428, 235, 70, 1, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7535, 241, 120, 2, 31, "Input"],
+Cell[7658, 245, 71, 1, 64, "Output"]
+}, Open  ]]
 }
 ]
 *)
