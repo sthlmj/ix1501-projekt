@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    327929,       6182]
-NotebookOptionsPosition[    325141,       6097]
-NotebookOutlinePosition[    325593,       6114]
-CellTagsIndexPosition[    325550,       6111]
+NotebookDataLength[    328348,       6180]
+NotebookOptionsPosition[    325560,       6095]
+NotebookOutlinePosition[    326012,       6112]
+CellTagsIndexPosition[    325969,       6109]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -60,8 +60,8 @@ rekommendationen och studera under vilken omst\[ADoubleDot]ndighet det \
 \[ADoubleDot]r giltig. Exponential f\[ODoubleDot]rdelningen \[ADoubleDot]r v\
 \[ADoubleDot]ldig skew j\[ADoubleDot]mf\[ODoubleDot]rd med likformig f\
 \[ODoubleDot]rdelningen. Hur p\[ARing]verkar detta approximationen med normal \
-f\[ODoubleDot]rdelningen? \n\nI ett viss mobil system nya samtal anl\
-\[ADoubleDot]nder med exponential f\[ODoubleDot]rdelad ankomst tid med v\
+f\[ODoubleDot]rdelningen? \n\nI ett viss mobil system anl\[ADoubleDot]nder \
+nytt samtal med exponential f\[ODoubleDot]rdelad ankomst tid med v\
 \[ADoubleDot]ntev\[ADoubleDot]rdet ",
  Cell[BoxData[
   FormBox[
@@ -69,7 +69,7 @@ f\[ODoubleDot]rdelningen? \n\nI ett viss mobil system nya samtal anl\
     RowBox[{
      SuperscriptBox["\[Lambda]", 
       RowBox[{"-", "1"}]], "=", "3"}]}], TraditionalForm]]],
- " minuter. "
+ " minuter. Ankomst tiden \[ADoubleDot]r tiden mellan tv\[ARing] samtal."
 }], "Subsection",
  CellChangeTimes->{{3.6581476189040394`*^9, 3.6581476230634556`*^9}, {
   3.658353664606743*^9, 3.658353671105603*^9}, {3.658353775906103*^9, 
@@ -79,7 +79,8 @@ f\[ODoubleDot]rdelningen? \n\nI ett viss mobil system nya samtal anl\
   3.658356673772192*^9, 3.658356705184924*^9}, {3.658358557609585*^9, 
   3.658358558639305*^9}, {3.6583969932903643`*^9, 3.6583970495416718`*^9}, {
   3.6583979401405554`*^9, 3.6583979711905813`*^9}, {3.6583982926047306`*^9, 
-  3.65839830249343*^9}}],
+  3.65839830249343*^9}, {3.658413243195567*^9, 3.6584132525701027`*^9}, {
+  3.6584137537019763`*^9, 3.6584137611163797`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -100,7 +101,7 @@ uppgifter? ", "Text",
    3.6581475198201323`*^9, 3.6581475296541157`*^9}, 3.6581477284519935`*^9, {
    3.658356822057679*^9, 3.658356827576318*^9}, {3.6583588949238033`*^9, 
    3.658358930129649*^9}, {3.6583981269230843`*^9, 3.658398146129114*^9}}]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -123,7 +124,7 @@ mathematica. \
    3.658358930129649*^9}, {3.6583981269230843`*^9, 3.658398146129114*^9}, {
    3.658398186031414*^9, 3.6583981980793686`*^9}, {3.658399709637911*^9, 
    3.6583997255785937`*^9}}]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1688,7 +1689,7 @@ Frf0MZG3grF0mPj30bIO9+FrGrqhcXQ4OFCu+QT3/wCyQH2H
    3.658232547335077*^9, {3.658233010526077*^9, 3.658233020530077*^9}, 
    3.658233090380077*^9, 3.658233370248077*^9, 3.658233605203077*^9, 
    3.658358833520116*^9}]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1704,7 +1705,7 @@ Cell[TextData[StyleBox["Grafer uppgift 2",
    3.658399073335298*^9}],
 
 Cell[TextData[{
- StyleBox["Uppgiften: : ",
+ StyleBox["Uppgiften: ",
   FontWeight->"Bold"],
  "Studera antalet av inkommande samtal under en timme.\nPlottrar absolute och \
 relative error av sannolikhet funktionen genom normal approximationen. "
@@ -1715,7 +1716,8 @@ relative error av sannolikhet funktionen genom normal approximationen. "
    3.658358930129649*^9}, {3.6583981269230843`*^9, 3.658398146129114*^9}, {
    3.6583982171943064`*^9, 3.65839825605729*^9}, {3.658398518335594*^9, 
    3.6583985529964433`*^9}, {3.6583989674687986`*^9, 3.658399004012111*^9}, {
-   3.6583990861039143`*^9, 3.658399092145125*^9}}],
+   3.6583990861039143`*^9, 3.658399092145125*^9}, {3.6584138027394876`*^9, 
+   3.6584138029302254`*^9}}],
 
 Cell["Graf 2.1: Sannolikhet funktion antal samtal under 1h.", "Text",
  CellChangeTimes->{{3.658147389230075*^9, 3.6581474325254035`*^9}, {
@@ -2821,7 +2823,7 @@ uce2SEDo7D5qkPDvP+emoP2quEhAIqmlG+fw7z86Yac6
      Scaled[0.02]}, {0, 0}},
   Ticks->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{3.6583991998713884`*^9, 3.6584082161337132`*^9}]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -2905,40 +2907,33 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{"\[Lambda]", " ", "=", " ", 
     RowBox[{"1", "/", "3"}]}], ";"}], " ", 
-  RowBox[{"(*", 
+  RowBox[{"(*", " ", 
    RowBox[{
-    RowBox[{
-    "f\[ODoubleDot]rv\[ADoubleDot]ntade", " ", "tidsintervall", " ", 
-     "\[Mu]"}], "=", 
+    RowBox[{"v\[ADoubleDot]ntev\[ADoubleDot]rdet", " ", "\[Mu]"}], "=", 
     RowBox[{
      SuperscriptBox["\[Lambda]", 
       RowBox[{"-", "1"}]], "=", "3"}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{
-   RowBox[{"n", " ", "=", " ", "20"}], ";"}], " ", 
+  RowBox[{"n", " ", "=", " ", "20"}], ";", " ", 
   RowBox[{"(*", 
-   RowBox[{"antalet", " ", "iid", " ", "rvs"}], "*)"}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"gamma", " ", "=", " ", 
-    RowBox[{"GammaDistribution", "[", 
-     RowBox[{"n", ",", " ", 
-      RowBox[{"1", "/", "\[Lambda]"}]}], "]"}]}], ";"}], " ", 
+   RowBox[{"antal", " ", "iid", " ", "rvs"}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"gamma", " ", "=", " ", 
+   RowBox[{"GammaDistribution", "[", 
+    RowBox[{"n", ",", " ", 
+     RowBox[{"1", "/", "\[Lambda]"}]}], "]"}]}], ";", " ", 
   RowBox[{"(*", 
-   RowBox[{"summerar", " ", "iid", " ", "rvs"}], 
-   "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{"N", "[", "gamma", "]"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
    RowBox[{
-    SubscriptBox["\[Mu]", "exakt"], "  ", "=", " ", 
-    RowBox[{"Mean", "[", "gamma", "]"}]}], ";"}], " ", 
-  RowBox[{"(*", 
-   RowBox[{"ber\[ADoubleDot]knar", " ", "median"}], 
-   "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{"N", "[", 
-  SubscriptBox["\[Mu]", "exakt"], "]"}], "\[IndentingNewLine]", 
+   "summa", " ", "av", " ", "exponential", " ", "f\[ODoubleDot]rdelad", " ", 
+    "ankomst", " ", "tid"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"N", "[", "gamma", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["\[Mu]", "exakt"], "  ", "=", " ", 
+   RowBox[{"Mean", "[", "gamma", "]"}]}], ";", " ", 
+  RowBox[{"(*", "medelv\[ADoubleDot]rdet", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"N", "[", 
+   SubscriptBox["\[Mu]", "exakt"], "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"\[Sigma]", " ", "=", " ", 
    RowBox[{"StandardDeviation", "[", "gamma", "]"}]}], 
@@ -3191,7 +3186,10 @@ Cell[BoxData[{
    3.6584002626744313`*^9}, {3.6584002946486235`*^9, 
    3.6584003495814905`*^9}, {3.6584040668626256`*^9, 3.658404096503688*^9}, {
    3.658404167652506*^9, 3.658404168042416*^9}, {3.658404239875074*^9, 
-   3.6584042431242695`*^9}}],
+   3.6584042431242695`*^9}, {3.6584131995264397`*^9, 3.658413218863887*^9}, {
+   3.658413274586706*^9, 3.6584133346964736`*^9}, {3.6584138475186768`*^9, 
+   3.6584138497344847`*^9}, {3.658416844176386*^9, 3.658416860588725*^9}, {
+   3.6584172801597753`*^9, 3.6584172818694177`*^9}}],
 
 Cell[BoxData[
  RowBox[{"GammaDistribution", "[", 
@@ -4723,7 +4721,7 @@ Frf0MZG3grF0mPj30bIO9+FrGrqhcXQ4OFCu+QT3/wCyQH2H
    3.6584003204803896`*^9, 3.6584003519701138`*^9, {3.6584040779946384`*^9, 
    3.6584041015062637`*^9}, 3.6584042445497828`*^9}]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -6122,63 +6120,63 @@ Cell[1131, 38, 93, 1, 53, "Date"],
 Cell[CellGroupData[{
 Cell[1249, 43, 178, 2, 89, "Section"],
 Cell[CellGroupData[{
-Cell[1452, 49, 1607, 32, 362, "Subsection"],
+Cell[1452, 49, 1769, 33, 362, "Subsection"],
 Cell[CellGroupData[{
-Cell[3084, 85, 410, 9, 44, "Subsubsection"],
-Cell[3497, 96, 397, 5, 38, "Text"]
-}, Closed]],
+Cell[3246, 86, 410, 9, 44, "Subsubsection"],
+Cell[3659, 97, 397, 5, 38, "Text"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[3931, 106, 535, 7, 43, "Subsubsection"],
-Cell[4469, 115, 516, 9, 38, "Text"]
-}, Closed]],
+Cell[4093, 107, 535, 7, 44, "Subsubsection"],
+Cell[4631, 116, 516, 9, 38, "Text"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[5022, 129, 634, 9, 43, "Subsubsection"],
-Cell[5659, 140, 1903, 56, 116, "Text"],
-Cell[7565, 198, 557, 7, 38, "Text"],
-Cell[8125, 207, 28868, 488, 330, "Output"],
-Cell[36996, 697, 556, 7, 38, "Text"],
-Cell[37555, 706, 25790, 438, 338, "Output"],
-Cell[63348, 1146, 560, 7, 38, "Text"],
-Cell[63911, 1155, 15558, 267, 317, "Output"],
-Cell[79472, 1424, 618, 10, 38, "Text"],
-Cell[80093, 1436, 14705, 253, 344, "Output"]
-}, Closed]],
+Cell[5184, 130, 634, 9, 44, "Subsubsection"],
+Cell[5821, 141, 1903, 56, 141, "Text"],
+Cell[7727, 199, 557, 7, 38, "Text"],
+Cell[8287, 208, 28868, 488, 330, "Output"],
+Cell[37158, 698, 556, 7, 38, "Text"],
+Cell[37717, 707, 25790, 438, 338, "Output"],
+Cell[63510, 1147, 560, 7, 38, "Text"],
+Cell[64073, 1156, 15558, 267, 317, "Output"],
+Cell[79634, 1425, 618, 10, 38, "Text"],
+Cell[80255, 1437, 14705, 253, 344, "Output"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[94835, 1694, 630, 9, 43, "Subsubsection"],
-Cell[95468, 1705, 729, 12, 63, "Text"],
-Cell[96200, 1719, 568, 7, 38, "Text"],
-Cell[96771, 1728, 5932, 132, 342, "Output"],
-Cell[102706, 1862, 564, 7, 38, "Text"],
-Cell[103273, 1871, 7795, 158, 346, "Output"],
-Cell[111071, 2031, 565, 7, 38, "Text"],
-Cell[111639, 2040, 5912, 128, 325, "Output"],
-Cell[117554, 2170, 563, 7, 38, "Text"],
-Cell[118120, 2179, 36288, 643, 363, "Output"]
-}, Closed]],
+Cell[94997, 1695, 630, 9, 44, "Subsubsection"],
+Cell[95630, 1706, 781, 13, 63, "Text"],
+Cell[96414, 1721, 568, 7, 38, "Text"],
+Cell[96985, 1730, 5932, 132, 342, "Output"],
+Cell[102920, 1864, 564, 7, 38, "Text"],
+Cell[103487, 1873, 7795, 158, 346, "Output"],
+Cell[111285, 2033, 565, 7, 38, "Text"],
+Cell[111853, 2042, 5912, 128, 325, "Output"],
+Cell[117768, 2172, 563, 7, 38, "Text"],
+Cell[118334, 2181, 36288, 643, 363, "Output"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[154445, 2827, 697, 22, 47, "Subsubsection"],
-Cell[155145, 2851, 1607, 41, 105, "Text"],
+Cell[154659, 2829, 697, 22, 48, "Subsubsection"],
+Cell[155359, 2853, 1607, 41, 105, "Text"],
 Cell[CellGroupData[{
-Cell[156777, 2896, 11651, 297, 1161, "Input"],
-Cell[168431, 3195, 1110, 16, 48, "Output"],
-Cell[169544, 3213, 1041, 14, 48, "Output"],
-Cell[170588, 3229, 1059, 14, 48, "Output"],
-Cell[171650, 3245, 1127, 16, 48, "Output"],
-Cell[172780, 3263, 29044, 490, 330, "Output"],
-Cell[201827, 3755, 25972, 440, 338, "Output"],
-Cell[227802, 4197, 15738, 269, 317, "Output"],
-Cell[243543, 4468, 14883, 255, 344, "Output"]
+Cell[156991, 2898, 11856, 293, 1161, "Input"],
+Cell[168850, 3193, 1110, 16, 48, "Output"],
+Cell[169963, 3211, 1041, 14, 48, "Output"],
+Cell[171007, 3227, 1059, 14, 48, "Output"],
+Cell[172069, 3243, 1127, 16, 48, "Output"],
+Cell[173199, 3261, 29044, 490, 330, "Output"],
+Cell[202246, 3753, 25972, 440, 338, "Output"],
+Cell[228221, 4195, 15738, 269, 317, "Output"],
+Cell[243962, 4466, 14883, 255, 344, "Output"]
 }, Open  ]]
-}, Closed]],
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[258475, 4729, 411, 8, 43, "Subsubsection"],
-Cell[258889, 4739, 469, 9, 38, "Text"],
+Cell[258894, 4727, 411, 8, 43, "Subsubsection"],
+Cell[259308, 4737, 469, 9, 38, "Text"],
 Cell[CellGroupData[{
-Cell[259383, 4752, 9755, 269, 1252, "Input"],
-Cell[269141, 5023, 5932, 132, 342, "Output"],
-Cell[275076, 5157, 7795, 158, 346, "Output"],
-Cell[282874, 5317, 5912, 128, 325, "Output"],
-Cell[288789, 5447, 36288, 643, 363, "Output"]
+Cell[259802, 4750, 9755, 269, 1252, "Input"],
+Cell[269560, 5021, 5932, 132, 342, "Output"],
+Cell[275495, 5155, 7795, 158, 346, "Output"],
+Cell[283293, 5315, 5912, 128, 325, "Output"],
+Cell[289208, 5445, 36288, 643, 363, "Output"]
 }, Open  ]]
 }, Closed]]
 }, Open  ]]
