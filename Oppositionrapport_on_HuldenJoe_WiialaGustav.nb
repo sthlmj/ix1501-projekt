@@ -1,0 +1,387 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12816,        378]
+NotebookOptionsPosition[      4294,        146]
+NotebookOutlinePosition[     11869,        341]
+CellTagsIndexPosition[     11826,        338]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["", "Text",
+ CellChangeTimes->{3.6568468236361513`*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Oppositionsrapport projekt 2", "Title",
+ CellChangeTimes->{{3.6568460890678988`*^9, 3.656846089182974*^9}, {
+  3.6585012199799433`*^9, 3.6585012203080854`*^9}}],
+
+Cell["\<\
+Opponenter:
+Angelina Mallo, mallo@kth.se
+Ninous Essac, ninous@kth.se\
+\>", "Text",
+ CellChangeTimes->{{3.6568460803441057`*^9, 3.6568460992955694`*^9}}],
+
+Cell["\<\
+Respondenter:
+Joe Huld\[EAcute]n, joeda@kth.se
+Gustav Wiiala, wiiala@kth.se\
+\>", "Text",
+ CellChangeTimes->{{3.6568461341416984`*^9, 3.65684618684542*^9}, {
+  3.6585011643125525`*^9, 3.6585011749451756`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Rapportens struktur och layout", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Positivt", "Subsection"],
+
+Cell["\<\
+Bra uppdelning av sammanfattning, diskussion, slutsats osv, blir v\
+\[ADoubleDot]ldigt tydligt.
+\
+\>", "Text",
+ CellChangeTimes->{{3.656846298066594*^9, 3.656846354239375*^9}, {
+   3.6568463952480717`*^9, 3.6568464040789337`*^9}, 3.6585014048964667`*^9, {
+   3.658501540113373*^9, 3.658501567958005*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Negativt", "Subsection"],
+
+Cell["\<\
+Det hade blivit en b\[ADoubleDot]ttre struktur om varje graf hade hamnat \
+under sin egen kodsnutt, det hade gjort det mycket tydligare \[ADoubleDot]n \
+att det \[ADoubleDot]r massa kod och sen flera grafer trots att det \
+\[ADoubleDot]r rubriker. \
+\>", "Text",
+ CellChangeTimes->{{3.656846697660816*^9, 3.65684670907539*^9}, {
+   3.656846739166827*^9, 3.6568467881693535`*^9}, 3.6585014086040645`*^9, {
+   3.6585014644676113`*^9, 3.6585015047515364`*^9}}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Uppgiftens l\[ODoubleDot]sning/slutsatser", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Positivt", "Subsection"],
+
+Cell["\<\
+Bra med f\[ODoubleDot]rklaring av termer i b\[ODoubleDot]rjan av rapporten, \
+ifall oklarheter skulle uppst\[ARing]. \
+\>", "Text",
+ CellChangeTimes->{{3.65684650141475*^9, 3.6568465019370956`*^9}, {
+   3.6568465345459766`*^9, 3.656846579652461*^9}, 3.658501391481138*^9, {
+   3.6585026732233033`*^9, 3.6585027086553288`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Negativt", "Subsection"],
+
+Cell["\<\
+Kanske lite kort slutsats, kunde utvecklas mer. Dessutom st\[ARing]r det i \
+princip samma sak p\[ARing] slutsats och diskussion. Ta endast med ena i \
+framtiden om inneh\[ARing]llet \[ADoubleDot]r s\[ARing] pass likt. \
+\>", "Text",
+ CellChangeTimes->{{3.6568466379561605`*^9, 3.656846654482152*^9}, 
+   3.658501389027765*^9, {3.6585025465712843`*^9, 3.6585025613721027`*^9}, {
+   3.6585026033229322`*^9, 3.6585026343655252`*^9}}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Kodsektion", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Positivt", "Subsection"],
+
+Cell["\<\
+Bra illustrerat med olika f\[ADoubleDot]rg p\[ARing] graferna. 
+Strukturerat och bra ordning. \
+\>", "Text",
+ CellChangeTimes->{{3.656846418413455*^9, 3.656846439455646*^9}, {
+   3.6568467974627757`*^9, 3.6568468100261126`*^9}, 3.658501395590051*^9, {
+   3.658502179417453*^9, 3.6585022211571417`*^9}, {3.6585023448217187`*^9, 
+   3.6585023760394273`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Negativt", "Subsection"],
+
+Cell["\<\
+B\[ADoubleDot]ttre att undvika text i kod-delen. Koden f\[ODoubleDot]r dessa \
+uppgifter \[ADoubleDot]r s\[ARing] pass sj\[ADoubleDot]lvs\[ADoubleDot]gande \
+att det inte \[ADoubleDot]r n\[ODoubleDot]dv\[ADoubleDot]ndigt. \
+\>", "Text",
+ CellChangeTimes->{{3.6568464452914968`*^9, 3.6568464943930874`*^9}, 
+   3.658501398793481*^9, {3.6585020711631317`*^9, 3.6585021221389475`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.656846460434546*^9, 3.6568464619595585`*^9}}]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{707, 506},
+WindowMargins->{{171, Automatic}, {Automatic, 68}},
+PageHeaders->{{None, None, None}, {
+   Cell[
+    TextData[{"KTH/ICT - Kommunikationssystem"}], "PageHeader", FontFamily -> 
+    "Arial", FontSize -> 9], None, None}},
+PageFooters->{{None, None, None}, {None, 
+   Cell[
+    TextData[{
+      CounterBox["Page"]}], "PageNumber"], None}},
+PrintingOptions->{"FacingPages"->False},
+TrackCellChangeTimes->True,
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell["Modify the definitions below to change the default appearance of all \
+cells in a given style. \nMake modifications to any definition using commands \
+in the Format menu.", "Text"], 
+   Cell[
+    CellGroupData[{
+      Cell["Notebook Options Settings", "Section"], 
+      Cell[
+       StyleData["Notebook"], ShowCellBracket -> Automatic]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Title and Section Cells", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell["Title", "Subsection"], 
+         Cell[
+          StyleData["Title"], FontFamily -> "Arial", FontSize -> 36, 
+          FontWeight -> "Bold", FontColor -> GrayLevel[0.5]], 
+         Cell[
+          StyleData["Subtitle"], FontFamily -> "Arial", FontWeight -> "Bold"], 
+         Cell[
+          StyleData["Subsubtitle"], FontFamily -> "Arial", FontSize -> 18]}, 
+        Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell[
+         "Chapter", "Subsection", 
+          CellChangeTimes -> {{3.6182073006504073`*^9, 
+           3.6182073204926414`*^9}}], 
+         Cell[
+          StyleData["Chapter"], FontFamily -> "Arial", FontSize -> 34, 
+          FontWeight -> "Plain", FontSlant -> "Plain", 
+          FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}], 
+         Cell[
+          StyleData["Subchapter"], CellDingbat -> 
+          StyleBox["\[FilledSmallSquare]", Alignment -> Baseline, 
+            RGBColor[
+            0.09803921568627451, 0.32941176470588235`, 0.6509803921568628]], 
+          FontFamily -> "Arial", FontSize -> 28, FontWeight -> "Plain", 
+          FontSlant -> "Plain", 
+          FontVariations -> {
+           "StrikeThrough" -> False, "Underline" -> False}]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell["Section", "Subsection"], 
+         Cell[
+          StyleData["Section"], CellDingbat -> None, ShowGroupOpener -> True, 
+          FontFamily -> "Arial", FontSize -> 24, FontWeight -> "Bold", 
+          FontColor -> GrayLevel[0.5]], 
+         Cell[
+          StyleData["Subsection"], CellDingbat -> None, ShowGroupOpener -> 
+          True, CellMargins -> {{40., 3.}, {8., 12.}}, FontFamily -> "Arial", 
+          FontSize -> 18, FontWeight -> "Bold", FontColor -> GrayLevel[0.3]], 
+         Cell[
+          StyleData["Subsubsection"], CellDingbat -> None, ShowGroupOpener -> 
+          True, CellMargins -> {{53., Inherited}, {2, 10}}, FontFamily -> 
+          "Arial", FontSize -> 16, FontWeight -> "Bold", FontColor -> 
+          GrayLevel[0.]], 
+         Cell[
+          StyleData["Subsubsubsection"], CellDingbat -> None, ShowGroupOpener -> 
+          True, MenuSortingValue -> 1400, FontFamily -> "Arial Narrow", 
+          FontSize -> 14, FontWeight -> "Bold", FontSlant -> "Plain", 
+          FontVariations -> {"StrikeThrough" -> False, "Underline" -> False}, 
+          FontColor -> GrayLevel[0]]}, Closed]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Body Text", "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell["Standard", "Subsection"], 
+         Cell[
+          StyleData["Text"], FontFamily -> "Times"], 
+         Cell[
+          StyleData["SmallText"], MenuSortingValue -> 1425, FontFamily -> 
+          "Times"]}, Closed]], 
+      Cell[
+       CellGroupData[{
+         Cell["Display", "Subsection"], 
+         Cell[
+          CellGroupData[{
+            Cell["Lists", "Subsubsection"], 
+            Cell[
+             StyleData["Item"], CellDingbat -> 
+             StyleBox["\[FilledCircle]", Alignment -> Baseline, 
+               GrayLevel[0.3]], FontFamily -> "Times"], 
+            Cell[
+             StyleData["ItemParagraph"], FontFamily -> "Times"], 
+            Cell[
+             StyleData["Subitem"], CellDingbat -> 
+             StyleBox["\[FilledSmallCircle]", Alignment -> Baseline, 
+               GrayLevel[0.3]], FontFamily -> "Times"], 
+            Cell[
+             StyleData["SubitemParagraph"], FontFamily -> "Times"], 
+            Cell[
+             StyleData["Subsubitem"], CellDingbat -> 
+             StyleBox["\[FilledSmallCircle]", Alignment -> Baseline, 
+               GrayLevel[0.5]], FontFamily -> "Times"], 
+            Cell[
+             StyleData["SubsubitemParagraph"], FontFamily -> "Times"], 
+            Cell[
+             StyleData["ItemNumbered"], FontFamily -> "Times"], 
+            Cell[
+             StyleData["SubitemNumbered"], FontFamily -> "Times"], 
+            Cell[
+             StyleData["SubsubitemNumbered"], FontFamily -> "Times"]}, 
+           Closed]], 
+         Cell[
+          CellGroupData[{
+            Cell["Templates", "Subsubsection"], 
+            Cell[
+             StyleData[
+             "SideCaptionArray", StyleDefinitions -> StyleData["Text"]], 
+             GridBoxOptions -> {
+              GridBoxAlignment -> {"Columns" -> {Left}, "Rows" -> {Center}}, 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}}], 
+            Cell[
+             StyleData[
+             "SideCaption", StyleDefinitions -> StyleData["SmallText"]]]}, 
+           Closed]]}, Closed]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Input and Output Cells", "Section"], 
+      Cell[
+       StyleData["Input"], ShowCellBracket -> True], 
+      Cell[
+       StyleData["InputOnly"], ShowCellBracket -> True], 
+      Cell[
+       StyleData["Code"], ShowCellBracket -> True], 
+      Cell[
+       StyleData["Output"], ShowCellBracket -> True], 
+      Cell[
+       StyleData["Message"], ShowCellBracket -> True], 
+      Cell[
+       StyleData["Print"], ShowCellBracket -> True]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Styles for Formulas and Programming", "Section"], 
+      Cell[
+       StyleData["InlineFormula"]], 
+      Cell[
+       StyleData["DisplayFormula"], FontFamily -> "Times"], 
+      Cell[
+       StyleData["DisplayFormulaNumbered"], FontFamily -> "Times"], 
+      Cell[
+       StyleData["Program"], ShowCellBracket -> True]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell["Citation Styles", "Section"], 
+      Cell[
+       StyleData["Reference"]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell[
+       TextData[{"Styles for ", 
+         StyleBox["Mathematica", FontSlant -> "Italic"], 
+         " System\[Hyphen]specific Elements"}], "Section"], 
+      Cell[
+       CellGroupData[{
+         Cell["Default Box Styles", "Subsection"], 
+         Cell[
+          StyleData["Graphics"], FontFamily -> "Times"], 
+         Cell[
+          StyleData["Graphics3D"], FontFamily -> "Times"], 
+         Cell[
+          StyleData["NetworkGraphics"], FontFamily -> "Times"]}, Closed]]}, 
+     Closed]]}, Visible -> False, FrontEndVersion -> 
+  "9.0 for Microsoft Windows (64-bit) (January 25, 2013)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 60, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[643, 25, 166, 2, 83, "Title"],
+Cell[812, 29, 162, 5, 68, "Text"],
+Cell[977, 36, 219, 6, 68, "Text"],
+Cell[CellGroupData[{
+Cell[1221, 46, 49, 0, 76, "Section"],
+Cell[CellGroupData[{
+Cell[1295, 50, 30, 0, 41, "Subsection"],
+Cell[1328, 52, 314, 7, 49, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1679, 64, 30, 0, 41, "Subsection"],
+Cell[1712, 66, 467, 8, 49, "Text"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2228, 80, 60, 0, 46, "Section"],
+Cell[CellGroupData[{
+Cell[2313, 84, 30, 0, 41, "Subsection"],
+Cell[2346, 86, 336, 6, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2719, 97, 30, 0, 41, "Subsection"],
+Cell[2752, 99, 441, 7, 49, "Text"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[3242, 112, 29, 0, 46, "Section"],
+Cell[CellGroupData[{
+Cell[3296, 116, 30, 0, 41, "Subsection"],
+Cell[3329, 118, 366, 7, 49, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3732, 130, 30, 0, 41, "Subsection"],
+Cell[3765, 132, 392, 6, 49, "Text"],
+Cell[4160, 140, 94, 1, 31, "Input"]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
